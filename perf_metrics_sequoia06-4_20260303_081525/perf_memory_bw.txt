@@ -1,0 +1,37 @@
+#           time             counts unit events
+     5.004484645           16734035      UNC_M_CAS_COUNT_SCH0.RD          #    398.1 MB/s  memory_bandwidth_read
+     5.004484645                                                   #    559.2 MB/s  memory_bandwidth_total
+     5.004484645            6286241      UNC_M_CAS_COUNT_SCH1.WR          #    161.1 MB/s  memory_bandwidth_write
+     5.004484645            6297639      UNC_M_CAS_COUNT_SCH0.WR                                               
+     5.004484645           14368479      UNC_M_CAS_COUNT_SCH1.RD                                               
+     5.004484645         5004621018 ns   duration_time                                                         
+    10.009598799           13316888      UNC_M_CAS_COUNT_SCH0.RD          #    310.3 MB/s  memory_bandwidth_read
+    10.009598799                                                   #    434.3 MB/s  memory_bandwidth_total
+    10.009598799            4843068      UNC_M_CAS_COUNT_SCH1.WR          #    124.1 MB/s  memory_bandwidth_write
+    10.009598799            4850789      UNC_M_CAS_COUNT_SCH0.WR                                               
+    10.009598799           10922643      UNC_M_CAS_COUNT_SCH1.RD                                               
+    10.009598799         5005112608 ns   duration_time                                                         
+    15.014312761           14089537      UNC_M_CAS_COUNT_SCH0.RD          #    330.8 MB/s  memory_bandwidth_read
+    15.014312761                                                   #    454.5 MB/s  memory_bandwidth_total
+    15.014312761            4831763      UNC_M_CAS_COUNT_SCH1.WR          #    123.6 MB/s  memory_bandwidth_write
+    15.014312761            4827348      UNC_M_CAS_COUNT_SCH0.WR                                               
+    15.014312761           11755606      UNC_M_CAS_COUNT_SCH1.RD                                               
+    15.014312761         5004714646 ns   duration_time                                                         
+    20.019467589           13301803      UNC_M_CAS_COUNT_SCH0.RD          #    310.8 MB/s  memory_bandwidth_read
+    20.019467589                                                   #    430.0 MB/s  memory_bandwidth_total
+    20.019467589            4659253      UNC_M_CAS_COUNT_SCH1.WR          #    119.2 MB/s  memory_bandwidth_write
+    20.019467589            4655923      UNC_M_CAS_COUNT_SCH0.WR                                               
+    20.019467589           10977200      UNC_M_CAS_COUNT_SCH1.RD                                               
+    20.019467589         5005154447 ns   duration_time                                                         
+    25.024509600           12697012      UNC_M_CAS_COUNT_SCH0.RD          #    295.0 MB/s  memory_bandwidth_read
+    25.024509600                                                   #    415.3 MB/s  memory_bandwidth_total
+    25.024509600            4700820      UNC_M_CAS_COUNT_SCH1.WR          #    120.3 MB/s  memory_bandwidth_write
+    25.024509600            4701163      UNC_M_CAS_COUNT_SCH0.WR                                               
+    25.024509600           10349883      UNC_M_CAS_COUNT_SCH1.RD                                               
+    25.024509600         5005040091 ns   duration_time                                                         
+    30.001044861           12261131      UNC_M_CAS_COUNT_SCH0.RD          #    283.8 MB/s  memory_bandwidth_read
+    30.001044861                                                   #    401.9 MB/s  memory_bandwidth_total
+    30.001044861            4609036      UNC_M_CAS_COUNT_SCH1.WR          #    118.0 MB/s  memory_bandwidth_write
+    30.001044861            4610647      UNC_M_CAS_COUNT_SCH0.WR                                               
+    30.001044861            9913928      UNC_M_CAS_COUNT_SCH1.RD                                               
+    30.001044861         4976535824 ns   duration_time                                                         

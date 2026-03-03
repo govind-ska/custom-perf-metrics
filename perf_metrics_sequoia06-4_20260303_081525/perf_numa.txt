@@ -1,0 +1,31 @@
+#           time             counts unit events
+     5.004248221                  0      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF_REMOTE #    100.0 %  numa_reads_addressed_to_local_dram
+     5.004248221                                                   #      0.0 %  numa_reads_addressed_to_remote_dram  (6.10%)
+     5.004248221            8446693      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF_LOCAL                                        (6.10%)
+     5.004248221            2739740      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_LOCAL                                        (6.10%)
+     5.004248221                  0      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_REMOTE                                        (6.10%)
+    10.010709830                  0      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF_REMOTE #    100.0 %  numa_reads_addressed_to_local_dram
+    10.010709830                                                   #      0.0 %  numa_reads_addressed_to_remote_dram  (5.96%)
+    10.010709830            4401270      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF_LOCAL                                        (5.96%)
+    10.010709830            2371126      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_LOCAL                                        (5.96%)
+    10.010709830                  0      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_REMOTE                                        (5.96%)
+    15.017508380                  0      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF_REMOTE #    100.0 %  numa_reads_addressed_to_local_dram
+    15.017508380                                                   #      0.0 %  numa_reads_addressed_to_remote_dram  (5.97%)
+    15.017508380            5990426      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF_LOCAL                                        (5.97%)
+    15.017508380            2495669      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_LOCAL                                        (5.97%)
+    15.017508380                  0      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_REMOTE                                        (5.97%)
+    20.023500193                  0      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF_REMOTE #    100.0 %  numa_reads_addressed_to_local_dram
+    20.023500193                                                   #      0.0 %  numa_reads_addressed_to_remote_dram  (5.89%)
+    20.023500193            6040692      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF_LOCAL                                        (5.89%)
+    20.023500193            1781247      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_LOCAL                                        (5.89%)
+    20.023500193                  0      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_REMOTE                                        (5.89%)
+    25.029542526                  0      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF_REMOTE #    100.0 %  numa_reads_addressed_to_local_dram
+    25.029542526                                                   #      0.0 %  numa_reads_addressed_to_remote_dram  (5.97%)
+    25.029542526            4374682      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF_LOCAL                                        (5.97%)
+    25.029542526            1776669      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_LOCAL                                        (5.97%)
+    25.029542526                  0      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_REMOTE                                        (5.97%)
+    30.001050801                  0      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF_REMOTE #    100.0 %  numa_reads_addressed_to_local_dram
+    30.001050801                                                   #      0.0 %  numa_reads_addressed_to_remote_dram  (5.93%)
+    30.001050801            4975274      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF_LOCAL                                        (5.93%)
+    30.001050801            2042818      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_LOCAL                                        (5.93%)
+    30.001050801                  0      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_REMOTE                                        (5.93%)

@@ -1,0 +1,7 @@
+#           time             counts   unit events
+     5.004300613             711.03 Joules power/energy-pkg/                                                     
+    10.009691007             626.98 Joules power/energy-pkg/                                                     
+    15.010465980             619.96 Joules power/energy-pkg/                                                     
+    20.015830743             694.94 Joules power/energy-pkg/                                                     
+    25.018437046             628.15 Joules power/energy-pkg/                                                     
+    30.000964505             586.17 Joules power/energy-pkg/                                                     

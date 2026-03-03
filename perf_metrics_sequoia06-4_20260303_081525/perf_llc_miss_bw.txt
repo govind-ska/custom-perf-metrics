@@ -1,0 +1,49 @@
+#           time             counts unit events
+     5.004389443                  0      UNC_CHA_REQUESTS.WRITES_REMOTE   #      0.0 MB/s  llc_miss_remote_memory_bandwidth_write  (21.07%)
+     5.004389443         5012085148 ns   duration_time                                                         
+     5.004389443                  0      UNC_CHA_REQUESTS.READS_REMOTE    #      0.0 MB/s  llc_miss_remote_memory_bandwidth_read  (23.59%)
+     5.004389443         5012016715 ns   duration_time                                                         
+     5.004389443            6472182      UNC_CHA_REQUESTS.WRITES_LOCAL    #     82.8 MB/s  llc_miss_local_memory_bandwidth_write  (23.92%)
+     5.004389443         5011954707 ns   duration_time                                                         
+     5.004389443           19731735      UNC_CHA_REQUESTS.READS_LOCAL     #    252.6 MB/s  llc_miss_local_memory_bandwidth_read  (13.82%)
+     5.004389443         5011896418 ns   duration_time                                                         
+    10.010151125                  0      UNC_CHA_REQUESTS.WRITES_REMOTE   #      0.0 MB/s  llc_miss_remote_memory_bandwidth_write  (21.20%)
+    10.010151125         5005769993 ns   duration_time                                                         
+    10.010151125                  0      UNC_CHA_REQUESTS.READS_REMOTE    #      0.0 MB/s  llc_miss_remote_memory_bandwidth_read  (23.61%)
+    10.010151125         5005767920 ns   duration_time                                                         
+    10.010151125            2236657      UNC_CHA_REQUESTS.WRITES_LOCAL    #     28.6 MB/s  llc_miss_local_memory_bandwidth_write  (23.80%)
+    10.010151125         5005769866 ns   duration_time                                                         
+    10.010151125           12563400      UNC_CHA_REQUESTS.READS_LOCAL     #    160.8 MB/s  llc_miss_local_memory_bandwidth_read  (13.30%)
+    10.010151125         5005779807 ns   duration_time                                                         
+    15.016380855                  0      UNC_CHA_REQUESTS.WRITES_REMOTE   #      0.0 MB/s  llc_miss_remote_memory_bandwidth_write  (21.07%)
+    15.016380855         5006272304 ns   duration_time                                                         
+    15.016380855                  0      UNC_CHA_REQUESTS.READS_REMOTE    #      0.0 MB/s  llc_miss_remote_memory_bandwidth_read  (23.38%)
+    15.016380855         5006320382 ns   duration_time                                                         
+    15.016380855            3260852      UNC_CHA_REQUESTS.WRITES_LOCAL    #     41.7 MB/s  llc_miss_local_memory_bandwidth_write  (23.49%)
+    15.016380855         5006353598 ns   duration_time                                                         
+    15.016380855           14617496      UNC_CHA_REQUESTS.READS_LOCAL     #    187.1 MB/s  llc_miss_local_memory_bandwidth_read  (13.37%)
+    15.016380855         5006342937 ns   duration_time                                                         
+    20.023300844                  0      UNC_CHA_REQUESTS.WRITES_REMOTE   #      0.0 MB/s  llc_miss_remote_memory_bandwidth_write  (21.05%)
+    20.023300844         5006846433 ns   duration_time                                                         
+    20.023300844                  0      UNC_CHA_REQUESTS.READS_REMOTE    #      0.0 MB/s  llc_miss_remote_memory_bandwidth_read  (23.51%)
+    20.023300844         5006796496 ns   duration_time                                                         
+    20.023300844            2323597      UNC_CHA_REQUESTS.WRITES_LOCAL    #     29.7 MB/s  llc_miss_local_memory_bandwidth_write  (23.77%)
+    20.023300844         5006756358 ns   duration_time                                                         
+    20.023300844           13367367      UNC_CHA_REQUESTS.READS_LOCAL     #    171.1 MB/s  llc_miss_local_memory_bandwidth_read  (13.41%)
+    20.023300844         5006779476 ns   duration_time                                                         
+    25.029693784                  0      UNC_CHA_REQUESTS.WRITES_REMOTE   #      0.0 MB/s  llc_miss_remote_memory_bandwidth_write  (21.21%)
+    25.029693784         5006382278 ns   duration_time                                                         
+    25.029693784                  0      UNC_CHA_REQUESTS.READS_REMOTE    #      0.0 MB/s  llc_miss_remote_memory_bandwidth_read  (23.61%)
+    25.029693784         5006374578 ns   duration_time                                                         
+    25.029693784            2089514      UNC_CHA_REQUESTS.WRITES_LOCAL    #     26.7 MB/s  llc_miss_local_memory_bandwidth_write  (23.80%)
+    25.029693784         5006371367 ns   duration_time                                                         
+    25.029693784           12879359      UNC_CHA_REQUESTS.READS_LOCAL     #    164.9 MB/s  llc_miss_local_memory_bandwidth_read  (13.30%)
+    25.029693784         5006344531 ns   duration_time                                                         
+    30.001036294                  0      UNC_CHA_REQUESTS.WRITES_REMOTE   #      0.0 MB/s  llc_miss_remote_memory_bandwidth_write  (21.07%)
+    30.001036294         4971640694 ns   duration_time                                                         
+    30.001036294                  0      UNC_CHA_REQUESTS.READS_REMOTE    #      0.0 MB/s  llc_miss_remote_memory_bandwidth_read  (23.45%)
+    30.001036294         4971647405 ns   duration_time                                                         
+    30.001036294            1819378      UNC_CHA_REQUESTS.WRITES_LOCAL    #     23.3 MB/s  llc_miss_local_memory_bandwidth_write  (23.64%)
+    30.001036294         4971652782 ns   duration_time                                                         
+    30.001036294           12334050      UNC_CHA_REQUESTS.READS_LOCAL     #    157.9 MB/s  llc_miss_local_memory_bandwidth_read  (13.35%)
+    30.001036294         4971663798 ns   duration_time                                                         

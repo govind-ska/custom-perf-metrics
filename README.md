@@ -1,11 +1,11 @@
 # perf_metrics_collector.sh
 
-Standalone system-wide performance metrics collector using `perf stat` and `turbostat`. Auto-detects Intel or AMD and collects the appropriate events -- no compilation or external dependencies beyond `perf` and root access.
+Standalone system-wide performance metrics collector using `perf stat` and `turbostat`. Auto-detects Intel or AMD and collects the appropriate events - no compilation or external dependencies beyond `perf` and root access.
 
 ## Quick Start
 
 ```bash
-sudo bash perf_metrics_collector.sh -t 30
+sudo bash perf_metrics_collector.sh -t 30 -i 5000
 ```
 
 Output is written to `./perf_metrics_<hostname>_<timestamp>/`.
@@ -18,7 +18,7 @@ sudo bash perf_metrics_collector.sh [-t duration_sec] [-i interval_ms] [-o outpu
 
 | Flag | Default | Description |
 |------|---------|-------------|
-| `-t` | `10` | Collection duration in seconds |
+| `-t` | `30` | Collection duration in seconds |
 | `-i` | `5000` | Time-series sampling interval in milliseconds. Set to `0` for aggregate-only (single summary per collection) |
 | `-o` | auto | Output directory. Default: `./perf_metrics_<hostname>_<YYYYMMDD_HHMMSS>` |
 | `-h` | | Print usage and exit |
@@ -39,12 +39,12 @@ sudo bash perf_metrics_collector.sh -t 10 -o /tmp/my_run
 ## Requirements
 
 - **perf** (linux-tools / perf-tools package)
-- **root** (sudo) -- required for system-wide collection and NMI watchdog control
-- **turbostat** (optional) -- frequency, C-states, temperature, power via MSRs
+- **root** (sudo) - required for system-wide collection and NMI watchdog control
+- **turbostat** (optional) - frequency, C-states, temperature, power via MSRs
 
 ## How It Works
 
-Each metric category runs as a **separate background `perf stat` process**. This isolates failures -- if one event group is unsupported on the platform, all other collectors still succeed. Results are combined into a single `METRICS_REPORT.txt` at the end.
+Each metric category runs as a **separate background `perf stat` process**. This isolates failures - if one event group is unsupported on the platform, all other collectors still succeed. Results are combined into a single `METRICS_REPORT.txt` at the end.
 
 The NMI watchdog is temporarily disabled during collection (frees a hardware counter) and restored on exit.
 
@@ -52,7 +52,7 @@ The NMI watchdog is temporarily disabled during collection (frees a hardware cou
 
 ### Intel (SPR / EMR / GNR and newer)
 
-Uses `perf stat -M` built-in metric groups with symbolic uncore event names. No raw event codes needed -- the kernel resolves the correct encodings for the platform.
+Uses `perf stat -M` built-in metric groups with symbolic uncore event names. No raw event codes needed - the kernel resolves the correct encodings for the platform.
 
 | Collector | Metric Groups | What It Measures |
 |-----------|--------------|------------------|
@@ -76,13 +76,13 @@ Uses `perf stat -M` built-in metric groups with symbolic uncore event names. No 
 
 Uses raw event codes from PerfSpect's event definitions across three PMU types: **cpu**, **l3** (uncore), and **df** (Data Fabric uncore).
 
-**PMU auto-detection:** The script probes `/sys/devices/` for both naming conventions -- `amd_df`/`amd_l3` (newer kernels) vs `df`/`l3` (older kernels). If a PMU is not found, its collectors are skipped with a warning.
+**PMU auto-detection:** The script probes `/sys/devices/` for both naming conventions - `amd_df`/`amd_l3` (newer kernels) vs `df`/`l3` (older kernels). If a PMU is not found, its collectors are skipped with a warning.
 
 | Collector | PMU | What It Measures |
 |-----------|-----|------------------|
 | `core1` | cpu | CPU frequency, utilization, IPC/CPI, branch misprediction, L1D/L2 access rates |
 | `core2` | cpu | L2 cache hit/miss/prefetch breakdown (instruction + data cache origins) |
-| `core3` | cpu | NUMA fill locality -- L1D fills by source: local L2, local CCX, near/far cache, near/far DRAM |
+| `core3` | cpu | NUMA fill locality - L1D fills by source: local L2, local CCX, near/far cache, near/far DRAM |
 | `core4` | cpu | Op cache + instruction cache miss ratios, full ITLB/DTLB hierarchy (L1/L2 hits/misses by page size: 4K, coalesced, 2M) |
 | `core5` | cpu | Macro-ops dispatched/retired, SSE/AVX mixed stalls |
 | `l3` | l3 / amd_l3 | L3 cache accesses, hits, misses + average L3 read miss latency (sampled, in ns) |

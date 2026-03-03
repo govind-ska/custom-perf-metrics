@@ -1,0 +1,25 @@
+#           time             counts unit events
+     5.004907482              24664      UNC_IIO_DATA_REQ_OF_CPU.MEM_WRITE.ALL_PARTS #      0.0 MB/s  iio_bandwidth_write 
+     5.004907482         5005339804 ns   duration_time                                                         
+     5.004907482           38509929      UNC_IIO_DATA_REQ_OF_CPU.MEM_READ.ALL_PARTS #     30.8 MB/s  iio_bandwidth_read  
+     5.004907482         5005339519 ns   duration_time                                                         
+    10.009599726              19936      UNC_IIO_DATA_REQ_OF_CPU.MEM_WRITE.ALL_PARTS #      0.0 MB/s  iio_bandwidth_write 
+    10.009599726         5004690156 ns   duration_time                                                         
+    10.009599726           39038759      UNC_IIO_DATA_REQ_OF_CPU.MEM_READ.ALL_PARTS #     31.2 MB/s  iio_bandwidth_read  
+    10.009599726         5004688393 ns   duration_time                                                         
+    15.014801286              17192      UNC_IIO_DATA_REQ_OF_CPU.MEM_WRITE.ALL_PARTS #      0.0 MB/s  iio_bandwidth_write 
+    15.014801286         5005202768 ns   duration_time                                                         
+    15.014801286           38546505      UNC_IIO_DATA_REQ_OF_CPU.MEM_READ.ALL_PARTS #     30.8 MB/s  iio_bandwidth_read  
+    15.014801286         5005208441 ns   duration_time                                                         
+    20.019824093              17044      UNC_IIO_DATA_REQ_OF_CPU.MEM_WRITE.ALL_PARTS #      0.0 MB/s  iio_bandwidth_write 
+    20.019824093         5005020575 ns   duration_time                                                         
+    20.019824093           38401873      UNC_IIO_DATA_REQ_OF_CPU.MEM_READ.ALL_PARTS #     30.7 MB/s  iio_bandwidth_read  
+    20.019824093         5005016907 ns   duration_time                                                         
+    25.024953486              19864      UNC_IIO_DATA_REQ_OF_CPU.MEM_WRITE.ALL_PARTS #      0.0 MB/s  iio_bandwidth_write 
+    25.024953486         5005128977 ns   duration_time                                                         
+    25.024953486           38440596      UNC_IIO_DATA_REQ_OF_CPU.MEM_READ.ALL_PARTS #     30.8 MB/s  iio_bandwidth_read  
+    25.024953486         5005128046 ns   duration_time                                                         
+    30.001043626              19532      UNC_IIO_DATA_REQ_OF_CPU.MEM_WRITE.ALL_PARTS #      0.0 MB/s  iio_bandwidth_write 
+    30.001043626         4976093150 ns   duration_time                                                         
+    30.001043626           38172664      UNC_IIO_DATA_REQ_OF_CPU.MEM_READ.ALL_PARTS #     30.5 MB/s  iio_bandwidth_read  
+    30.001043626         4976093511 ns   duration_time                                                         

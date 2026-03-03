@@ -1,0 +1,91 @@
+#           time             counts unit events
+     5.004599695                  0      UNC_CHA_TOR_INSERTS.IO_ITOMCACHENEAR_REMOTE #      0.0 MB/s  io_bandwidth_write_remote  (6.72%)
+     5.004599695                  0      UNC_CHA_TOR_INSERTS.IO_ITOM_REMOTE                                        (6.72%)
+     5.004599695         5019869753 ns   duration_time                                                         
+     5.004599695                 16      UNC_CHA_TOR_INSERTS.IO_ITOMCACHENEAR_LOCAL #      0.0 MB/s  io_bandwidth_write_local  (11.81%)
+     5.004599695               1272      UNC_CHA_TOR_INSERTS.IO_ITOM_LOCAL                                        (11.81%)
+     5.004599695         5019759377 ns   duration_time                                                         
+     5.004599695                 16      UNC_CHA_TOR_INSERTS.IO_ITOMCACHENEAR #      0.0 MB/s  io_bandwidth_write    (11.81%)
+     5.004599695               1529      UNC_CHA_TOR_INSERTS.IO_ITOM                                             (11.81%)
+     5.004599695         5019653927 ns   duration_time                                                         
+     5.004599695                  0      UNC_CHA_TOR_INSERTS.IO_PCIRDCUR_REMOTE #      0.0 MB/s  io_bandwidth_read_remote  (11.81%)
+     5.004599695         5019589894 ns   duration_time                                                         
+     5.004599695            2397395      UNC_CHA_TOR_INSERTS.IO_PCIRDCUR_LOCAL #     30.7 MB/s  io_bandwidth_read_local  (17.73%)
+     5.004599695         5019541997 ns   duration_time                                                         
+     5.004599695            2395379      UNC_CHA_TOR_INSERTS.IO_PCIRDCUR  #     30.7 MB/s  io_bandwidth_read     (17.76%)
+     5.004599695         5019487510 ns   duration_time                                                         
+    10.012532610                  0      UNC_CHA_TOR_INSERTS.IO_ITOMCACHENEAR_REMOTE #      0.0 MB/s  io_bandwidth_write_remote  (6.73%)
+    10.012532610                  0      UNC_CHA_TOR_INSERTS.IO_ITOM_REMOTE                                        (6.73%)
+    10.012532610         5007933048 ns   duration_time                                                         
+    10.012532610                  0      UNC_CHA_TOR_INSERTS.IO_ITOMCACHENEAR_LOCAL #      0.0 MB/s  io_bandwidth_write_local  (11.82%)
+    10.012532610                716      UNC_CHA_TOR_INSERTS.IO_ITOM_LOCAL                                        (11.82%)
+    10.012532610         5007931732 ns   duration_time                                                         
+    10.012532610                108      UNC_CHA_TOR_INSERTS.IO_ITOMCACHENEAR #      0.0 MB/s  io_bandwidth_write    (11.82%)
+    10.012532610               1313      UNC_CHA_TOR_INSERTS.IO_ITOM                                             (11.82%)
+    10.012532610         5007931399 ns   duration_time                                                         
+    10.012532610                  0      UNC_CHA_TOR_INSERTS.IO_PCIRDCUR_REMOTE #      0.0 MB/s  io_bandwidth_read_remote  (11.78%)
+    10.012532610         5007980977 ns   duration_time                                                         
+    10.012532610            2617289      UNC_CHA_TOR_INSERTS.IO_PCIRDCUR_LOCAL #     33.5 MB/s  io_bandwidth_read_local  (17.61%)
+    10.012532610         5008029893 ns   duration_time                                                         
+    10.012532610            2617203      UNC_CHA_TOR_INSERTS.IO_PCIRDCUR  #     33.5 MB/s  io_bandwidth_read     (17.56%)
+    10.012532610         5008078363 ns   duration_time                                                         
+    15.020562209                  0      UNC_CHA_TOR_INSERTS.IO_ITOMCACHENEAR_REMOTE #      0.0 MB/s  io_bandwidth_write_remote  (6.64%)
+    15.020562209                  0      UNC_CHA_TOR_INSERTS.IO_ITOM_REMOTE                                        (6.64%)
+    15.020562209         5008038916 ns   duration_time                                                         
+    15.020562209                 34      UNC_CHA_TOR_INSERTS.IO_ITOMCACHENEAR_LOCAL #      0.0 MB/s  io_bandwidth_write_local  (11.66%)
+    15.020562209                611      UNC_CHA_TOR_INSERTS.IO_ITOM_LOCAL                                        (11.66%)
+    15.020562209         5008039424 ns   duration_time                                                         
+    15.020562209                 50      UNC_CHA_TOR_INSERTS.IO_ITOMCACHENEAR #      0.0 MB/s  io_bandwidth_write    (11.66%)
+    15.020562209                953      UNC_CHA_TOR_INSERTS.IO_ITOM                                             (11.66%)
+    15.020562209         5008041535 ns   duration_time                                                         
+    15.020562209                  0      UNC_CHA_TOR_INSERTS.IO_PCIRDCUR_REMOTE #      0.0 MB/s  io_bandwidth_read_remote  (11.70%)
+    15.020562209         5007992088 ns   duration_time                                                         
+    15.020562209            2381040      UNC_CHA_TOR_INSERTS.IO_PCIRDCUR_LOCAL #     30.5 MB/s  io_bandwidth_read_local  (17.61%)
+    15.020562209         5007942670 ns   duration_time                                                         
+    15.020562209            2377872      UNC_CHA_TOR_INSERTS.IO_PCIRDCUR  #     30.4 MB/s  io_bandwidth_read     (17.71%)
+    15.020562209         5007894698 ns   duration_time                                                         
+    20.028513213                  0      UNC_CHA_TOR_INSERTS.IO_ITOMCACHENEAR_REMOTE #      0.0 MB/s  io_bandwidth_write_remote  (6.73%)
+    20.028513213                  0      UNC_CHA_TOR_INSERTS.IO_ITOM_REMOTE                                        (6.73%)
+    20.028513213         5007950520 ns   duration_time                                                         
+    20.028513213                  0      UNC_CHA_TOR_INSERTS.IO_ITOMCACHENEAR_LOCAL #      0.0 MB/s  io_bandwidth_write_local  (11.82%)
+    20.028513213               1045      UNC_CHA_TOR_INSERTS.IO_ITOM_LOCAL                                        (11.82%)
+    20.028513213         5007949857 ns   duration_time                                                         
+    20.028513213                  0      UNC_CHA_TOR_INSERTS.IO_ITOMCACHENEAR #      0.0 MB/s  io_bandwidth_write    (11.82%)
+    20.028513213                917      UNC_CHA_TOR_INSERTS.IO_ITOM                                             (11.82%)
+    20.028513213         5007948059 ns   duration_time                                                         
+    20.028513213                  0      UNC_CHA_TOR_INSERTS.IO_PCIRDCUR_REMOTE #      0.0 MB/s  io_bandwidth_read_remote  (11.82%)
+    20.028513213         5007948164 ns   duration_time                                                         
+    20.028513213            2383074      UNC_CHA_TOR_INSERTS.IO_PCIRDCUR_LOCAL #     30.5 MB/s  io_bandwidth_read_local  (17.73%)
+    20.028513213         5007947759 ns   duration_time                                                         
+    20.028513213            2382630      UNC_CHA_TOR_INSERTS.IO_PCIRDCUR  #     30.5 MB/s  io_bandwidth_read     (17.75%)
+    20.028513213         5007947329 ns   duration_time                                                         
+    25.037768086                  0      UNC_CHA_TOR_INSERTS.IO_ITOMCACHENEAR_REMOTE #      0.0 MB/s  io_bandwidth_write_remote  (6.73%)
+    25.037768086                  0      UNC_CHA_TOR_INSERTS.IO_ITOM_REMOTE                                        (6.73%)
+    25.037768086         5009249241 ns   duration_time                                                         
+    25.037768086                 32      UNC_CHA_TOR_INSERTS.IO_ITOMCACHENEAR_LOCAL #      0.0 MB/s  io_bandwidth_write_local  (11.82%)
+    25.037768086               2371      UNC_CHA_TOR_INSERTS.IO_ITOM_LOCAL                                        (11.82%)
+    25.037768086         5009248113 ns   duration_time                                                         
+    25.037768086                 56      UNC_CHA_TOR_INSERTS.IO_ITOMCACHENEAR #      0.0 MB/s  io_bandwidth_write    (11.80%)
+    25.037768086               1214      UNC_CHA_TOR_INSERTS.IO_ITOM                                             (11.80%)
+    25.037768086         5009312418 ns   duration_time                                                         
+    25.037768086                  0      UNC_CHA_TOR_INSERTS.IO_PCIRDCUR_REMOTE #      0.0 MB/s  io_bandwidth_read_remote  (11.72%)
+    25.037768086         5009361064 ns   duration_time                                                         
+    25.037768086            2390661      UNC_CHA_TOR_INSERTS.IO_PCIRDCUR_LOCAL #     30.6 MB/s  io_bandwidth_read_local  (17.55%)
+    25.037768086         5009408774 ns   duration_time                                                         
+    25.037768086            2386811      UNC_CHA_TOR_INSERTS.IO_PCIRDCUR  #     30.6 MB/s  io_bandwidth_read     (17.51%)
+    25.037768086         5009423371 ns   duration_time                                                         
+    30.000955521                  0      UNC_CHA_TOR_INSERTS.IO_ITOMCACHENEAR_REMOTE #      0.0 MB/s  io_bandwidth_write_remote  (6.77%)
+    30.000955521                  0      UNC_CHA_TOR_INSERTS.IO_ITOM_REMOTE                                        (6.77%)
+    30.000955521         4963187756 ns   duration_time                                                         
+    30.000955521                  0      UNC_CHA_TOR_INSERTS.IO_ITOMCACHENEAR_LOCAL #      0.0 MB/s  io_bandwidth_write_local  (11.77%)
+    30.000955521               1329      UNC_CHA_TOR_INSERTS.IO_ITOM_LOCAL                                        (11.77%)
+    30.000955521         4963190397 ns   duration_time                                                         
+    30.000955521                  0      UNC_CHA_TOR_INSERTS.IO_ITOMCACHENEAR #      0.0 MB/s  io_bandwidth_write    (11.78%)
+    30.000955521               1309      UNC_CHA_TOR_INSERTS.IO_ITOM                                             (11.78%)
+    30.000955521         4963125211 ns   duration_time                                                         
+    30.000955521                  0      UNC_CHA_TOR_INSERTS.IO_PCIRDCUR_REMOTE #      0.0 MB/s  io_bandwidth_read_remote  (11.86%)
+    30.000955521         4963076936 ns   duration_time                                                         
+    30.000955521            2367185      UNC_CHA_TOR_INSERTS.IO_PCIRDCUR_LOCAL #     30.3 MB/s  io_bandwidth_read_local  (17.79%)
+    30.000955521         4963079570 ns   duration_time                                                         
+    30.000955521            2373650      UNC_CHA_TOR_INSERTS.IO_PCIRDCUR  #     30.4 MB/s  io_bandwidth_read     (17.80%)
+    30.000955521         4963113211 ns   duration_time                                                         

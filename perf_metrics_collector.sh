@@ -19,6 +19,8 @@
 ###############################################################################
 set -euo pipefail
 
+ORIG_CMD="$0 $*"
+
 DURATION=10
 INTERVAL=5000
 OUTDIR=""
@@ -282,9 +284,10 @@ REPORT="$OUTDIR/METRICS_REPORT.txt"
 {
     echo "========================================================================"
     echo "  COMPREHENSIVE METRICS REPORT"
+    echo "  Command run:  sudo bash $ORIG_CMD"
     echo "  Platform: $MODEL_NAME"
     echo "  Vendor:   $VENDOR | Sockets: $SOCKETS | Cores/Socket: $CORES_PER_SOCKET"
-    echo "  Duration: ${DURATION}s | Collected: $(date)"
+    echo "  Duration: ${DURATION}s | Interval: $INTERVAL_MSG | Collected: $(date)"
     echo "========================================================================"
     echo ""
 

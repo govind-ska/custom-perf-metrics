@@ -1,0 +1,145 @@
+#           time             counts unit events
+     5.004878758        17495890409      INST_RETIRED.ANY                 #      0.0 per_instr  llc_data_read_mpi_demand_plus_prefetch  (16.55%)
+     5.004878758            6010685      UNC_CHA_TOR_INSERTS.IA_MISS_DRD                                         (9.18%)
+     5.004878758            6233280      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF                                        (11.79%)
+     5.004878758                390      UNC_CHA_TOR_INSERTS.IA_MISS_LLCPREFDATA                                        (11.79%)
+     5.004878758         5027813017 ns   duration_time                                                         
+     5.004878758          198851389      UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_DDR #     13.3 ns  llc_demand_data_read_miss_to_dram_latency  (5.90%)
+     5.004878758            3227751      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_DDR                                        (5.90%)
+     5.004878758       832649134137      UNC_CHA_CLOCKTICKS                                                      (6.39%)
+     5.004878758         5027614320 ns   duration_time                                                         
+     5.004878758               3053      UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_REMOTE #      nan ns  llc_demand_data_read_miss_latency_for_remote_requests  (5.92%)
+     5.004878758       625789801170      UNC_CHA_CLOCKTICKS                                                      (6.55%)
+     5.004878758                  0      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_REMOTE                                        (5.92%)
+     5.004878758         5027487326 ns   duration_time                                                         
+     5.004878758          237067377      UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_LOCAL #     26.6 ns  llc_demand_data_read_miss_latency_for_local_requests  (7.22%)
+     5.004878758       418986365404      UNC_CHA_CLOCKTICKS                                                      (6.86%)
+     5.004878758            3835555      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_LOCAL                                        (7.22%)
+     5.004878758         5027062891 ns   duration_time                                                         
+     5.004878758          198120863      UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD #     52.3 ns  llc_demand_data_read_miss_latency  (6.47%)
+     5.004878758            3211826      UNC_CHA_TOR_INSERTS.IA_MISS_DRD                                         (6.47%)
+     5.004878758       212348606986      UNC_CHA_CLOCKTICKS                                                      (6.47%)
+     5.004878758         5026934526 ns   duration_time                                                         
+     5.004878758        17294953880      INST_RETIRED.ANY                 #      0.0 per_instr  llc_code_read_mpi_demand_plus_prefetch  (17.07%)
+     5.004878758             415154      UNC_CHA_TOR_INSERTS.IA_MISS_CRD                                         (11.76%)
+     5.004878758         5026938735 ns   duration_time                                                         
+    10.016878895        12111689360      INST_RETIRED.ANY                 #      0.0 per_instr  llc_data_read_mpi_demand_plus_prefetch  (4.11%)
+    10.016878895            5283176      UNC_CHA_TOR_INSERTS.IA_MISS_DRD                                         (9.12%)
+    10.016878895            5313894      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF                                        (11.77%)
+    10.016878895              39903      UNC_CHA_TOR_INSERTS.IA_MISS_LLCPREFDATA                                        (11.77%)
+    10.016878895         5012151365 ns   duration_time                                                         
+    10.016878895          149930664      UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_DDR #     13.2 ns  llc_demand_data_read_miss_to_dram_latency  (5.83%)
+    10.016878895            2431586      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_DDR                                        (5.83%)
+    10.016878895       843166021662      UNC_CHA_CLOCKTICKS                                                      (6.31%)
+    10.016878895         5012148612 ns   duration_time                                                         
+    10.016878895               2597      UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_REMOTE #      nan ns  llc_demand_data_read_miss_latency_for_remote_requests  (5.84%)
+    10.016878895       633729673636      UNC_CHA_CLOCKTICKS                                                      (6.46%)
+    10.016878895                  0      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_REMOTE                                        (5.84%)
+    10.016878895         5012133088 ns   duration_time                                                         
+    10.016878895          161645597      UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_LOCAL #     26.2 ns  llc_demand_data_read_miss_latency_for_local_requests  (7.13%)
+    10.016878895       424406722167      UNC_CHA_CLOCKTICKS                                                      (6.77%)
+    10.016878895            2619661      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_LOCAL                                        (7.13%)
+    10.016878895         5012129977 ns   duration_time                                                         
+    10.016878895          157196742      UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD #     51.4 ns  llc_demand_data_read_miss_latency  (6.39%)
+    10.016878895            2560350      UNC_CHA_TOR_INSERTS.IA_MISS_DRD                                         (6.39%)
+    10.016878895       215151973314      UNC_CHA_CLOCKTICKS                                                      (6.39%)
+    10.016878895         5012078750 ns   duration_time                                                         
+    10.016878895        12037344366      INST_RETIRED.ANY                 #      0.0 per_instr  llc_code_read_mpi_demand_plus_prefetch  (4.46%)
+    10.016878895             317158      UNC_CHA_TOR_INSERTS.IA_MISS_CRD                                         (11.71%)
+    10.016878895         5012027243 ns   duration_time                                                         
+    15.028878113        14753187508      INST_RETIRED.ANY                 #      0.0 per_instr  llc_data_read_mpi_demand_plus_prefetch  (4.11%)
+    15.028878113            5397457      UNC_CHA_TOR_INSERTS.IA_MISS_DRD                                         (9.13%)
+    15.028878113            6317494      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF                                        (11.69%)
+    15.028878113                  0      UNC_CHA_TOR_INSERTS.IA_MISS_LLCPREFDATA                                        (11.69%)
+    15.028878113         5011835743 ns   duration_time                                                         
+    15.028878113          153338417      UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_DDR #     13.4 ns  llc_demand_data_read_miss_to_dram_latency  (5.91%)
+    15.028878113            2485003      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_DDR                                        (5.91%)
+    15.028878113       831608369171      UNC_CHA_CLOCKTICKS                                                      (6.39%)
+    15.028878113         5011837725 ns   duration_time                                                         
+    15.028878113               3065      UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_REMOTE #      nan ns  llc_demand_data_read_miss_latency_for_remote_requests  (5.92%)
+    15.028878113       625093882321      UNC_CHA_CLOCKTICKS                                                      (6.55%)
+    15.028878113                  0      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_REMOTE                                        (5.92%)
+    15.028878113         5011837316 ns   duration_time                                                         
+    15.028878113          157901009      UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_LOCAL #     26.6 ns  llc_demand_data_read_miss_latency_for_local_requests  (7.23%)
+    15.028878113       418614483456      UNC_CHA_CLOCKTICKS                                                      (6.86%)
+    15.028878113            2550072      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_LOCAL                                        (7.23%)
+    15.028878113         5011839746 ns   duration_time                                                         
+    15.028878113          172923572      UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD #     52.6 ns  llc_demand_data_read_miss_latency  (6.47%)
+    15.028878113            2789959      UNC_CHA_TOR_INSERTS.IA_MISS_DRD                                         (6.47%)
+    15.028878113       212202528709      UNC_CHA_CLOCKTICKS                                                      (6.47%)
+    15.028878113         5011839399 ns   duration_time                                                         
+    15.028878113        13153665109      INST_RETIRED.ANY                 #      0.0 per_instr  llc_code_read_mpi_demand_plus_prefetch  (4.46%)
+    15.028878113             472016      UNC_CHA_TOR_INSERTS.IA_MISS_CRD                                         (11.81%)
+    15.028878113         5011841079 ns   duration_time                                                         
+    20.040877639        19220360577      INST_RETIRED.ANY                 #      0.0 per_instr  llc_data_read_mpi_demand_plus_prefetch  (4.11%)
+    20.040877639            4698493      UNC_CHA_TOR_INSERTS.IA_MISS_DRD                                         (9.19%)
+    20.040877639            6275244      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF                                        (11.81%)
+    20.040877639               1325      UNC_CHA_TOR_INSERTS.IA_MISS_LLCPREFDATA                                        (11.81%)
+    20.040877639         5011992793 ns   duration_time                                                         
+    20.040877639          182341622      UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_DDR #     13.2 ns  llc_demand_data_read_miss_to_dram_latency  (5.91%)
+    20.040877639            2976295      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_DDR                                        (5.91%)
+    20.040877639       838203618144      UNC_CHA_CLOCKTICKS                                                      (6.39%)
+    20.040877639         5011990747 ns   duration_time                                                         
+    20.040877639               2526      UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_REMOTE #      nan ns  llc_demand_data_read_miss_latency_for_remote_requests  (5.92%)
+    20.040877639       630699590670      UNC_CHA_CLOCKTICKS                                                      (6.55%)
+    20.040877639                  0      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_REMOTE                                        (5.92%)
+    20.040877639         5011988112 ns   duration_time                                                         
+    20.040877639          155467566      UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_LOCAL #     26.1 ns  llc_demand_data_read_miss_latency_for_local_requests  (7.23%)
+    20.040877639       422483814889      UNC_CHA_CLOCKTICKS                                                      (6.86%)
+    20.040877639            2537384      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_LOCAL                                        (7.23%)
+    20.040877639         5011986215 ns   duration_time                                                         
+    20.040877639          141991999      UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD #     51.7 ns  llc_demand_data_read_miss_latency  (6.47%)
+    20.040877639            2306231      UNC_CHA_TOR_INSERTS.IA_MISS_DRD                                         (6.47%)
+    20.040877639       214176466468      UNC_CHA_CLOCKTICKS                                                      (6.47%)
+    20.040877639         5011986307 ns   duration_time                                                         
+    20.040877639        19830146886      INST_RETIRED.ANY                 #      0.0 per_instr  llc_code_read_mpi_demand_plus_prefetch  (4.46%)
+    20.040877639             157478      UNC_CHA_TOR_INSERTS.IA_MISS_CRD                                         (11.81%)
+    20.040877639         5011985509 ns   duration_time                                                         
+    25.052877372         3933097526      INST_RETIRED.ANY                 #      0.0 per_instr  llc_data_read_mpi_demand_plus_prefetch  (4.11%)
+    25.052877372            5733398      UNC_CHA_TOR_INSERTS.IA_MISS_DRD                                         (9.14%)
+    25.052877372            3687910      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF                                        (11.81%)
+    25.052877372                  0      UNC_CHA_TOR_INSERTS.IA_MISS_LLCPREFDATA                                        (11.81%)
+    25.052877372         5011994596 ns   duration_time                                                         
+    25.052877372          132528523      UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_DDR #     13.1 ns  llc_demand_data_read_miss_to_dram_latency  (5.91%)
+    25.052877372            2159155      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_DDR                                        (5.91%)
+    25.052877372       841823301993      UNC_CHA_CLOCKTICKS                                                      (6.34%)
+    25.052877372         5011992608 ns   duration_time                                                         
+    25.052877372               1839      UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_REMOTE #      nan ns  llc_demand_data_read_miss_latency_for_remote_requests  (5.88%)
+    25.052877372       633424049666      UNC_CHA_CLOCKTICKS                                                      (6.48%)
+    25.052877372                  0      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_REMOTE                                        (5.88%)
+    25.052877372         5012133469 ns   duration_time                                                         
+    25.052877372          159461959      UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_LOCAL #     25.9 ns  llc_demand_data_read_miss_latency_for_local_requests  (7.13%)
+    25.052877372       424651451643      UNC_CHA_CLOCKTICKS                                                      (6.77%)
+    25.052877372            2609801      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_LOCAL                                        (7.13%)
+    25.052877372         5012132417 ns   duration_time                                                         
+    25.052877372          247316007      UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD #     51.3 ns  llc_demand_data_read_miss_latency  (6.38%)
+    25.052877372            4033695      UNC_CHA_TOR_INSERTS.IA_MISS_DRD                                         (6.38%)
+    25.052877372       215333307214      UNC_CHA_CLOCKTICKS                                                      (6.38%)
+    25.052877372         5012132678 ns   duration_time                                                         
+    25.052877372         3865976433      INST_RETIRED.ANY                 #      0.0 per_instr  llc_code_read_mpi_demand_plus_prefetch  (4.46%)
+    25.052877372             279400      UNC_CHA_TOR_INSERTS.IA_MISS_CRD                                         (11.65%)
+    25.052877372         5012131822 ns   duration_time                                                         
+    30.001016691         3261732007      INST_RETIRED.ANY                 #      0.0 per_instr  llc_data_read_mpi_demand_plus_prefetch  (3.70%)
+    30.001016691            4736182      UNC_CHA_TOR_INSERTS.IA_MISS_DRD                                         (9.16%)
+    30.001016691            4688223      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF                                        (11.73%)
+    30.001016691             133694      UNC_CHA_TOR_INSERTS.IA_MISS_LLCPREFDATA                                        (11.73%)
+    30.001016691         4948170011 ns   duration_time                                                         
+    30.001016691          120215320      UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_DDR #     13.3 ns  llc_demand_data_read_miss_to_dram_latency  (5.91%)
+    30.001016691            1953098      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_DDR                                        (5.91%)
+    30.001016691       831961041617      UNC_CHA_CLOCKTICKS                                                      (6.42%)
+    30.001016691         4948172657 ns   duration_time                                                         
+    30.001016691               2550      UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_REMOTE #      nan ns  llc_demand_data_read_miss_latency_for_remote_requests  (5.95%)
+    30.001016691       625028520365      UNC_CHA_CLOCKTICKS                                                      (6.59%)
+    30.001016691                  0      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_REMOTE                                        (5.95%)
+    30.001016691         4948029402 ns   duration_time                                                         
+    30.001016691          133881791      UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_LOCAL #     26.4 ns  llc_demand_data_read_miss_latency_for_local_requests  (7.28%)
+    30.001016691       418173277051      UNC_CHA_CLOCKTICKS                                                      (6.90%)
+    30.001016691            2185663      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_LOCAL                                        (7.28%)
+    30.001016691         4948039831 ns   duration_time                                                         
+    30.001016691          182985487      UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD #     52.0 ns  llc_demand_data_read_miss_latency  (6.50%)
+    30.001016691            2992441      UNC_CHA_TOR_INSERTS.IA_MISS_DRD                                         (6.50%)
+    30.001016691       211606445269      UNC_CHA_CLOCKTICKS                                                      (6.50%)
+    30.001016691         4948169356 ns   duration_time                                                         
+    30.001016691         3158000994      INST_RETIRED.ANY                 #      0.0 per_instr  llc_code_read_mpi_demand_plus_prefetch  (4.01%)
+    30.001016691             194971      UNC_CHA_TOR_INSERTS.IA_MISS_CRD                                         (11.85%)
+    30.001016691         4948212685 ns   duration_time                                                         

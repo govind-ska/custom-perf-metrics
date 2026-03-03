@@ -1,0 +1,79 @@
+#           time             counts unit events
+     5.003046050        23885001411      CPU_CLK_UNHALTED.REF_TSC         #     0.00 tma_info_system_cpu_utilization
+     5.003046050                                                   #     0.03 tma_info_system_cpus_utilized
+     5.003046050                                                   #   210.81 tma_info_system_core_frequency  (17.52%)
+     5.003046050        31460126624      CPU_CLK_UNHALTED.THREAD                                                 (17.52%)
+     5.003046050       800243454779      TSC                                                                     (17.52%)
+     5.003046050         5015499339 ns   duration_time                    #     5.00 tma_info_system_time      
+     5.003046050        20287110597      INST_RETIRED.ANY                 # 20287110597.00 tma_info_inst_mix_instructions
+     5.003046050                                                   #     0.63 tma_info_thread_ipc         (17.91%)
+     5.003046050        32052688345      CPU_CLK_UNHALTED.THREAD                                                 (17.91%)
+     5.003046050         5015492628 ns   duration_time                                                         
+     5.003046050        33444456042      CPU_CLK_UNHALTED.THREAD          #     1.00 tma_info_system_mux         (18.38%)
+     5.003046050        33444456042      CPU_CLK_UNHALTED.THREAD_P                                               (18.38%)
+     5.003046050         5015485467 ns   duration_time                                                         
+    10.009317460        14091962145      CPU_CLK_UNHALTED.REF_TSC         #     0.00 tma_info_system_cpu_utilization
+    10.009317460                                                   #     0.02 tma_info_system_cpus_utilized
+    10.009317460                                                   #   182.31 tma_info_system_core_frequency  (4.35%)
+    10.009317460        16049976567      CPU_CLK_UNHALTED.THREAD                                                 (4.35%)
+    10.009317460       800367312394      TSC                                                                     (4.35%)
+    10.009317460         5006140286 ns   duration_time                    #     5.00 tma_info_system_time      
+    10.009317460        13770227748      INST_RETIRED.ANY                 # 13770227748.00 tma_info_inst_mix_instructions
+    10.009317460                                                   #     0.81 tma_info_thread_ipc         (4.26%)
+    10.009317460        17001133372      CPU_CLK_UNHALTED.THREAD                                                 (4.26%)
+    10.009317460         5006140038 ns   duration_time                                                         
+    10.009317460        16670059958      CPU_CLK_UNHALTED.THREAD          #     1.00 tma_info_system_mux         (3.80%)
+    10.009317460        16670059958      CPU_CLK_UNHALTED.THREAD_P                                               (3.80%)
+    10.009317460         5006140147 ns   duration_time                                                         
+    15.015045273        17511893261      CPU_CLK_UNHALTED.REF_TSC         #     0.00 tma_info_system_cpu_utilization
+    15.015045273                                                   #     0.02 tma_info_system_cpus_utilized
+    15.015045273                                                   #   197.83 tma_info_system_core_frequency  (4.35%)
+    15.015045273        21643097913      CPU_CLK_UNHALTED.THREAD                                                 (4.35%)
+    15.015045273       800349009506      TSC                                                                     (4.35%)
+    15.015045273         5005869024 ns   duration_time                    #     5.00 tma_info_system_time      
+    15.015045273        12352109727      INST_RETIRED.ANY                 # 12352109727.00 tma_info_inst_mix_instructions
+    15.015045273                                                   #     0.58 tma_info_thread_ipc         (4.26%)
+    15.015045273        21127335917      CPU_CLK_UNHALTED.THREAD                                                 (4.26%)
+    15.015045273         5005868799 ns   duration_time                                                         
+    15.015045273        22094920901      CPU_CLK_UNHALTED.THREAD          #     1.00 tma_info_system_mux         (3.80%)
+    15.015045273        22094920901      CPU_CLK_UNHALTED.THREAD_P                                               (3.80%)
+    15.015045273         5005868186 ns   duration_time                                                         
+    20.021050159        16955664565      CPU_CLK_UNHALTED.REF_TSC         #     0.00 tma_info_system_cpu_utilization
+    20.021050159                                                   #     0.02 tma_info_system_cpus_utilized
+    20.021050159                                                   #   194.36 tma_info_system_core_frequency  (4.34%)
+    20.021050159        20586072062      CPU_CLK_UNHALTED.THREAD                                                 (4.34%)
+    20.021050159       800416055818      TSC                                                                     (4.34%)
+    20.021050159         5006109073 ns   duration_time                    #     5.00 tma_info_system_time      
+    20.021050159        15287987263      INST_RETIRED.ANY                 # 15287987263.00 tma_info_inst_mix_instructions
+    20.021050159                                                   #     0.69 tma_info_thread_ipc         (4.21%)
+    20.021050159        22097744765      CPU_CLK_UNHALTED.THREAD                                                 (4.21%)
+    20.021050159         5006108354 ns   duration_time                                                         
+    20.021050159        20940434436      CPU_CLK_UNHALTED.THREAD          #     1.00 tma_info_system_mux         (3.70%)
+    20.021050159        20940434436      CPU_CLK_UNHALTED.THREAD_P                                               (3.70%)
+    20.021050159         5006108726 ns   duration_time                                                         
+    25.027048532        13154032198      CPU_CLK_UNHALTED.REF_TSC         #     0.00 tma_info_system_cpu_utilization
+    25.027048532                                                   #     0.02 tma_info_system_cpus_utilized
+    25.027048532                                                   #   162.54 tma_info_system_core_frequency  (3.92%)
+    25.027048532        13357438254      CPU_CLK_UNHALTED.THREAD                                                 (3.92%)
+    25.027048532       800327998451      TSC                                                                     (3.92%)
+    25.027048532         5005887249 ns   duration_time                    #     5.00 tma_info_system_time      
+    25.027048532         3269337636      INST_RETIRED.ANY                 # 3269337636.00 tma_info_inst_mix_instructions
+    25.027048532                                                   #     0.27 tma_info_thread_ipc         (3.88%)
+    25.027048532        11996464358      CPU_CLK_UNHALTED.THREAD                                                 (3.88%)
+    25.027048532         5005887366 ns   duration_time                                                         
+    25.027048532        11867096383      CPU_CLK_UNHALTED.THREAD          #     1.00 tma_info_system_mux         (3.53%)
+    25.027048532        11867129251      CPU_CLK_UNHALTED.THREAD_P                                               (3.53%)
+    25.027048532         5005887006 ns   duration_time                                                         
+    30.001019243        12350271460      CPU_CLK_UNHALTED.REF_TSC         #     0.00 tma_info_system_cpu_utilization
+    30.001019243                                                   #     0.02 tma_info_system_cpus_utilized
+    30.001019243                                                   #   158.76 tma_info_system_core_frequency  (4.33%)
+    30.001019243        12327268147      CPU_CLK_UNHALTED.THREAD                                                 (4.33%)
+    30.001019243       795289233285      TSC                                                                     (4.33%)
+    30.001019243         4974132040 ns   duration_time                    #     5.00 tma_info_system_time      
+    30.001019243         4061029611      INST_RETIRED.ANY                 # 4061029611.00 tma_info_inst_mix_instructions
+    30.001019243                                                   #     0.33 tma_info_thread_ipc         (4.24%)
+    30.001019243        12192189775      CPU_CLK_UNHALTED.THREAD                                                 (4.24%)
+    30.001019243         4974132797 ns   duration_time                                                         
+    30.001019243        13216674165      CPU_CLK_UNHALTED.THREAD          #     1.00 tma_info_system_mux         (3.76%)
+    30.001019243        13216640225      CPU_CLK_UNHALTED.THREAD_P                                               (3.76%)
+    30.001019243         4974133960 ns   duration_time                                                         

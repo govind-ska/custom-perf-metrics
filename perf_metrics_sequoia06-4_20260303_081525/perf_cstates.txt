@@ -1,0 +1,13 @@
+#           time             counts unit events
+     5.003351077                  0      cstate_core/c6-residency/                                             
+     5.003351077                  0      cstate_pkg/c6-residency/                                              
+    10.009360630                  0      cstate_core/c6-residency/                                             
+    10.009360630                  0      cstate_pkg/c6-residency/                                              
+    15.015348417                  0      cstate_core/c6-residency/                                             
+    15.015348417                  0      cstate_pkg/c6-residency/                                              
+    20.021353999                  0      cstate_core/c6-residency/                                             
+    20.021353999                  0      cstate_pkg/c6-residency/                                              
+    25.027350550                  0      cstate_core/c6-residency/                                             
+    25.027350550                  0      cstate_pkg/c6-residency/                                              
+    30.000957845                  0      cstate_core/c6-residency/                                             
+    30.000957845                  0      cstate_pkg/c6-residency/                                              
