@@ -1,0 +1,10 @@
+
+ Performance counter stats for 'system wide':
+
+             22836      UNC_IIO_DATA_REQ_OF_CPU.MEM_WRITE.ALL_PARTS #      0.0 MB/s  iio_bandwidth_write 
+        5002192234 ns   duration_time                                                         
+          37105765      UNC_IIO_DATA_REQ_OF_CPU.MEM_READ.ALL_PARTS #     29.7 MB/s  iio_bandwidth_read  
+        5002182292 ns   duration_time                                                         
+
+       5.001785909 seconds time elapsed
+

@@ -1,0 +1,11 @@
+
+ Performance counter stats for 'system wide':
+
+                 0      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF_REMOTE #    100.0 %  numa_reads_addressed_to_local_dram
+                                                  #      0.0 %  numa_reads_addressed_to_remote_dram  (6.11%)
+        5901637758      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF_LOCAL                                        (6.11%)
+         288106541      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_LOCAL                                        (6.11%)
+                 0      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_REMOTE                                        (6.11%)
+
+       5.008267937 seconds time elapsed
+

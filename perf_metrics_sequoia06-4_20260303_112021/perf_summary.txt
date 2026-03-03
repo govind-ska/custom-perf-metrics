@@ -1,0 +1,19 @@
+
+ Performance counter stats for 'system wide':
+
+      587755149676      CPU_CLK_UNHALTED.REF_TSC         #     0.01 tma_info_system_cpu_utilization
+                                                  #     0.73 tma_info_system_cpus_utilized
+                                                  #   249.07 tma_info_system_core_frequency  (13.69%)
+      915866230798      CPU_CLK_UNHALTED.THREAD                                                 (13.69%)
+      801212445170      TSC                                                                     (13.69%)
+        5037425214 ns   duration_time                    #     5.01 tma_info_system_time      
+      911379053144      INST_RETIRED.ANY                 # 911379053144.00 tma_info_inst_mix_instructions
+                                                  #     1.00 tma_info_thread_ipc         (18.02%)
+      913504659131      CPU_CLK_UNHALTED.THREAD                                                 (18.02%)
+        5037429572 ns   duration_time                                                         
+      910491084585      CPU_CLK_UNHALTED.THREAD          #     1.00 tma_info_system_mux         (20.80%)
+      910491084585      CPU_CLK_UNHALTED.THREAD_P                                               (20.80%)
+        5037434233 ns   duration_time                                                         
+
+       5.012635389 seconds time elapsed
+

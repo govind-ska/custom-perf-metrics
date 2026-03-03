@@ -1,0 +1,23 @@
+
+ Performance counter stats for 'system wide':
+
+          42190050      BR_MISP_RETIRED.ALL_BRANCHES                                            (14.02%)
+          46682758      MEM_INST_RETIRED.LOCK_LOADS                                             (14.02%)
+        3861012613      MEM_INST_RETIRED.ALL_STORES                                             (14.02%)
+      306084143796      MEM_INST_RETIRED.ALL_LOADS                                              (14.02%)
+      903581350756      cpu-cycles                                                              (14.02%)
+      579924833456      ref-cycles                                                              (14.02%)
+      901969435714      instructions                     #    1.00  insn per cycle              (14.02%)
+       21363928229      IDQ.DSB_UOPS                                                            (11.33%)
+        6492961131      IDQ.MITE_UOPS                                                           (11.33%)
+      583312105431      LSD.UOPS                                                                (11.33%)
+        3926602859      IDQ.MS_UOPS                                                             (11.33%)
+      907394646575      cpu-cycles                                                              (11.33%)
+      582313022247      ref-cycles                                                              (11.33%)
+      880957479583      instructions                     #    0.97  insn per cycle              (11.33%)
+       51468098202      cpu-cycles:k                                                            (13.57%)
+       33889383103      ref-cycles:k                                                            (13.57%)
+       11049589646      instructions:k                   #    0.21  insn per cycle              (13.57%)
+
+       5.012732784 seconds time elapsed
+

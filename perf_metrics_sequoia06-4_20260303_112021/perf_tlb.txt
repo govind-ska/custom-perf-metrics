@@ -1,0 +1,12 @@
+
+ Performance counter stats for 'system wide':
+
+      902959522425      INST_RETIRED.ANY                 #      0.0 per_instr  dtlb_2nd_level_store_mpi  (21.94%)
+          17583287      DTLB_STORE_MISSES.WALK_COMPLETED                                        (21.94%)
+      904536899415      INST_RETIRED.ANY                 #      0.0 per_instr  dtlb_2nd_level_load_mpi  (25.05%)
+           2619837      DTLB_LOAD_MISSES.WALK_COMPLETED                                         (25.05%)
+      897284341606      INST_RETIRED.ANY                 #      0.0 per_instr  itlb_2nd_level_mpi  (21.07%)
+           1124721      ITLB_MISSES.WALK_COMPLETED                                              (21.07%)
+
+       5.029516559 seconds time elapsed
+

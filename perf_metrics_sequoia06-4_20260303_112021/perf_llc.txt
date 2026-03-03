@@ -1,0 +1,30 @@
+
+ Performance counter stats for 'system wide':
+
+      916320130821      INST_RETIRED.ANY                 #      0.0 per_instr  llc_data_read_mpi_demand_plus_prefetch  (19.90%)
+         612649019      UNC_CHA_TOR_INSERTS.IA_MISS_DRD                                         (9.08%)
+        6192059908      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF                                        (12.03%)
+          97116008      UNC_CHA_TOR_INSERTS.IA_MISS_LLCPREFDATA                                        (12.03%)
+        5059565127 ns   duration_time                                                         
+       91124449530      UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_DDR #     42.3 ns  llc_demand_data_read_miss_to_dram_latency  (5.98%)
+         310184105      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_DDR                                        (5.98%)
+     1258077484309      UNC_CHA_CLOCKTICKS                                                      (6.11%)
+        5059581621 ns   duration_time                                                         
+              1303      UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_REMOTE #      nan ns  llc_demand_data_read_miss_latency_for_remote_requests  (6.44%)
+      946584385336      UNC_CHA_CLOCKTICKS                                                      (6.16%)
+                 0      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_REMOTE                                        (6.44%)
+        5059205762 ns   duration_time                                                         
+       92823838442      UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_LOCAL #     84.2 ns  llc_demand_data_read_miss_latency_for_local_requests  (5.98%)
+      635008004892      UNC_CHA_CLOCKTICKS                                                      (6.01%)
+         314917445      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_LOCAL                                        (5.98%)
+        5059198893 ns   duration_time                                                         
+       92024167730      UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD #    166.2 ns  llc_demand_data_read_miss_latency  (6.03%)
+         311592364      UNC_CHA_TOR_INSERTS.IA_MISS_DRD                                         (6.03%)
+      322200943693      UNC_CHA_CLOCKTICKS                                                      (6.03%)
+        5059209116 ns   duration_time                                                         
+      905629033664      INST_RETIRED.ANY                 #      0.0 per_instr  llc_code_read_mpi_demand_plus_prefetch  (19.82%)
+           1203450      UNC_CHA_TOR_INSERTS.IA_MISS_CRD                                         (11.93%)
+        5059248376 ns   duration_time                                                         
+
+       5.036229882 seconds time elapsed
+

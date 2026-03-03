@@ -1,0 +1,14 @@
+
+ Performance counter stats for 'system wide':
+
+                 0      UNC_CHA_REQUESTS.WRITES_REMOTE   #      0.0 MB/s  llc_miss_remote_memory_bandwidth_write  (22.02%)
+        5020975169 ns   duration_time                                                         
+                 0      UNC_CHA_REQUESTS.READS_REMOTE    #      0.0 MB/s  llc_miss_remote_memory_bandwidth_read  (23.60%)
+        5020983238 ns   duration_time                                                         
+         139844266      UNC_CHA_REQUESTS.WRITES_LOCAL    #   1785.3 MB/s  llc_miss_local_memory_bandwidth_write  (23.72%)
+        5020974905 ns   duration_time                                                         
+        6307941870      UNC_CHA_REQUESTS.READS_LOCAL     #  80530.6 MB/s  llc_miss_local_memory_bandwidth_read  (23.01%)
+        5020965122 ns   duration_time                                                         
+
+       5.013101438 seconds time elapsed
+

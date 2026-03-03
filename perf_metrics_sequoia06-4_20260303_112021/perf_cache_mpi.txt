@@ -1,0 +1,14 @@
+
+ Performance counter stats for 'system wide':
+
+      902922171742      INST_RETIRED.ANY                 #      0.0 per_instr  l2_demand_code_mpi  (20.25%)
+          10727709      L2_RQSTS.CODE_RD_MISS                                                   (20.25%)
+      900256640919      INST_RETIRED.ANY                 #      0.0 per_instr  l2_demand_data_read_mpi  (18.00%)
+        1992538361      MEM_LOAD_RETIRED.L2_MISS                                                (18.00%)
+      901359350407      INST_RETIRED.ANY                 #      0.0 per_instr  l2_mpi           (20.64%)
+        5781164225      L2_LINES_IN.ALL                                                         (20.64%)
+      903727422295      INST_RETIRED.ANY                 #      0.0 per_instr  l1d_mpi          (25.10%)
+        5959764919      L1D.REPLACEMENT                                                         (25.10%)
+
+       5.016255842 seconds time elapsed
+

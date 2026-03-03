@@ -1,0 +1,12 @@
+
+ Performance counter stats for 'system wide':
+
+        3184946982      UNC_M_CAS_COUNT_SCH0.RD          #  81393.1 MB/s  memory_bandwidth_read
+                                                  #  82938.9 MB/s  memory_bandwidth_total  (50.67%)
+          60520866      UNC_M_CAS_COUNT_SCH1.WR          #   1545.9 MB/s  memory_bandwidth_write  (50.67%)
+          60419008      UNC_M_CAS_COUNT_SCH0.WR                                                 (50.67%)
+        3182761548      UNC_M_CAS_COUNT_SCH1.RD                                                 (50.67%)
+        5007110570 ns   duration_time                                                         
+
+       5.006978011 seconds time elapsed
+

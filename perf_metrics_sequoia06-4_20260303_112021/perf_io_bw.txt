@@ -1,0 +1,21 @@
+
+ Performance counter stats for 'system wide':
+
+                 0      UNC_CHA_TOR_INSERTS.IO_ITOMCACHENEAR_REMOTE #      0.0 MB/s  io_bandwidth_write_remote  (7.35%)
+                 0      UNC_CHA_TOR_INSERTS.IO_ITOM_REMOTE                                        (7.35%)
+        5021926194 ns   duration_time                                                         
+                 8      UNC_CHA_TOR_INSERTS.IO_ITOMCACHENEAR_LOCAL #      0.0 MB/s  io_bandwidth_write_local  (11.79%)
+               870      UNC_CHA_TOR_INSERTS.IO_ITOM_LOCAL                                        (11.79%)
+        5021924222 ns   duration_time                                                         
+                 0      UNC_CHA_TOR_INSERTS.IO_ITOMCACHENEAR #      0.0 MB/s  io_bandwidth_write    (11.80%)
+               993      UNC_CHA_TOR_INSERTS.IO_ITOM                                             (11.80%)
+        5021981376 ns   duration_time                                                         
+                 0      UNC_CHA_TOR_INSERTS.IO_PCIRDCUR_REMOTE #      0.0 MB/s  io_bandwidth_read_remote  (11.80%)
+        5022017748 ns   duration_time                                                         
+           2300251      UNC_CHA_TOR_INSERTS.IO_PCIRDCUR_LOCAL #     29.4 MB/s  io_bandwidth_read_local  (17.71%)
+        5022055016 ns   duration_time                                                         
+           2304245      UNC_CHA_TOR_INSERTS.IO_PCIRDCUR  #     29.4 MB/s  io_bandwidth_read     (17.73%)
+        5022417451 ns   duration_time                                                         
+
+       5.008450463 seconds time elapsed
+

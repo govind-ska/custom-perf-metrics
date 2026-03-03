@@ -1,0 +1,903 @@
+========================================================================
+  COMPREHENSIVE METRICS REPORT
+  Command run:  sudo bash perf_metrics_collector.sh -t 5 -i 0 -w -p /root/mlc/Linux/mlc
+  Platform: Intel(R) Xeon(R) 6731P
+  Vendor:   GenuineIntel | Sockets: 1 | Cores/Socket: 32
+  Duration: 5s | Interval: aggregate only | Collected: Tue Mar  3 11:20:56 UTC 2026
+========================================================================
+
+------------------------------------------------------------------------
+  [cache_mpi]
+------------------------------------------------------------------------
+ Performance counter stats for 'system wide':
+      902922171742      INST_RETIRED.ANY                 #      0.0 per_instr  l2_demand_code_mpi  (20.25%)
+          10727709      L2_RQSTS.CODE_RD_MISS                                                   (20.25%)
+      900256640919      INST_RETIRED.ANY                 #      0.0 per_instr  l2_demand_data_read_mpi  (18.00%)
+        1992538361      MEM_LOAD_RETIRED.L2_MISS                                                (18.00%)
+      901359350407      INST_RETIRED.ANY                 #      0.0 per_instr  l2_mpi           (20.64%)
+        5781164225      L2_LINES_IN.ALL                                                         (20.64%)
+      903727422295      INST_RETIRED.ANY                 #      0.0 per_instr  l1d_mpi          (25.10%)
+        5959764919      L1D.REPLACEMENT                                                         (25.10%)
+       5.016255842 seconds time elapsed
+
+------------------------------------------------------------------------
+  [core]
+------------------------------------------------------------------------
+ Performance counter stats for 'system wide':
+          42190050      BR_MISP_RETIRED.ALL_BRANCHES                                            (14.02%)
+          46682758      MEM_INST_RETIRED.LOCK_LOADS                                             (14.02%)
+        3861012613      MEM_INST_RETIRED.ALL_STORES                                             (14.02%)
+      306084143796      MEM_INST_RETIRED.ALL_LOADS                                              (14.02%)
+      903581350756      cpu-cycles                                                              (14.02%)
+      579924833456      ref-cycles                                                              (14.02%)
+      901969435714      instructions                     #    1.00  insn per cycle              (14.02%)
+       21363928229      IDQ.DSB_UOPS                                                            (11.33%)
+        6492961131      IDQ.MITE_UOPS                                                           (11.33%)
+      583312105431      LSD.UOPS                                                                (11.33%)
+        3926602859      IDQ.MS_UOPS                                                             (11.33%)
+      907394646575      cpu-cycles                                                              (11.33%)
+      582313022247      ref-cycles                                                              (11.33%)
+      880957479583      instructions                     #    0.97  insn per cycle              (11.33%)
+       51468098202      cpu-cycles:k                                                            (13.57%)
+       33889383103      ref-cycles:k                                                            (13.57%)
+       11049589646      instructions:k                   #    0.21  insn per cycle              (13.57%)
+       5.012732784 seconds time elapsed
+
+------------------------------------------------------------------------
+  [cstates]
+------------------------------------------------------------------------
+ Performance counter stats for 'system wide':
+                 0      cstate_core/c6-residency/                                             
+                 0      cstate_pkg/c6-residency/                                              
+       5.009077864 seconds time elapsed
+
+------------------------------------------------------------------------
+  [iio_bw]
+------------------------------------------------------------------------
+ Performance counter stats for 'system wide':
+             22836      UNC_IIO_DATA_REQ_OF_CPU.MEM_WRITE.ALL_PARTS #      0.0 MB/s  iio_bandwidth_write 
+        5002192234 ns   duration_time                                                         
+          37105765      UNC_IIO_DATA_REQ_OF_CPU.MEM_READ.ALL_PARTS #     29.7 MB/s  iio_bandwidth_read  
+        5002182292 ns   duration_time                                                         
+       5.001785909 seconds time elapsed
+
+------------------------------------------------------------------------
+  [io_bw]
+------------------------------------------------------------------------
+ Performance counter stats for 'system wide':
+                 0      UNC_CHA_TOR_INSERTS.IO_ITOMCACHENEAR_REMOTE #      0.0 MB/s  io_bandwidth_write_remote  (7.35%)
+                 0      UNC_CHA_TOR_INSERTS.IO_ITOM_REMOTE                                        (7.35%)
+        5021926194 ns   duration_time                                                         
+                 8      UNC_CHA_TOR_INSERTS.IO_ITOMCACHENEAR_LOCAL #      0.0 MB/s  io_bandwidth_write_local  (11.79%)
+               870      UNC_CHA_TOR_INSERTS.IO_ITOM_LOCAL                                        (11.79%)
+        5021924222 ns   duration_time                                                         
+                 0      UNC_CHA_TOR_INSERTS.IO_ITOMCACHENEAR #      0.0 MB/s  io_bandwidth_write    (11.80%)
+               993      UNC_CHA_TOR_INSERTS.IO_ITOM                                             (11.80%)
+        5021981376 ns   duration_time                                                         
+                 0      UNC_CHA_TOR_INSERTS.IO_PCIRDCUR_REMOTE #      0.0 MB/s  io_bandwidth_read_remote  (11.80%)
+        5022017748 ns   duration_time                                                         
+           2300251      UNC_CHA_TOR_INSERTS.IO_PCIRDCUR_LOCAL #     29.4 MB/s  io_bandwidth_read_local  (17.71%)
+        5022055016 ns   duration_time                                                         
+           2304245      UNC_CHA_TOR_INSERTS.IO_PCIRDCUR  #     29.4 MB/s  io_bandwidth_read     (17.73%)
+        5022417451 ns   duration_time                                                         
+       5.008450463 seconds time elapsed
+
+------------------------------------------------------------------------
+  [llc]
+------------------------------------------------------------------------
+ Performance counter stats for 'system wide':
+      916320130821      INST_RETIRED.ANY                 #      0.0 per_instr  llc_data_read_mpi_demand_plus_prefetch  (19.90%)
+         612649019      UNC_CHA_TOR_INSERTS.IA_MISS_DRD                                         (9.08%)
+        6192059908      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF                                        (12.03%)
+          97116008      UNC_CHA_TOR_INSERTS.IA_MISS_LLCPREFDATA                                        (12.03%)
+        5059565127 ns   duration_time                                                         
+       91124449530      UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_DDR #     42.3 ns  llc_demand_data_read_miss_to_dram_latency  (5.98%)
+         310184105      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_DDR                                        (5.98%)
+     1258077484309      UNC_CHA_CLOCKTICKS                                                      (6.11%)
+        5059581621 ns   duration_time                                                         
+              1303      UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_REMOTE #      nan ns  llc_demand_data_read_miss_latency_for_remote_requests  (6.44%)
+      946584385336      UNC_CHA_CLOCKTICKS                                                      (6.16%)
+                 0      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_REMOTE                                        (6.44%)
+        5059205762 ns   duration_time                                                         
+       92823838442      UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD_LOCAL #     84.2 ns  llc_demand_data_read_miss_latency_for_local_requests  (5.98%)
+      635008004892      UNC_CHA_CLOCKTICKS                                                      (6.01%)
+         314917445      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_LOCAL                                        (5.98%)
+        5059198893 ns   duration_time                                                         
+       92024167730      UNC_CHA_TOR_OCCUPANCY.IA_MISS_DRD #    166.2 ns  llc_demand_data_read_miss_latency  (6.03%)
+         311592364      UNC_CHA_TOR_INSERTS.IA_MISS_DRD                                         (6.03%)
+      322200943693      UNC_CHA_CLOCKTICKS                                                      (6.03%)
+        5059209116 ns   duration_time                                                         
+      905629033664      INST_RETIRED.ANY                 #      0.0 per_instr  llc_code_read_mpi_demand_plus_prefetch  (19.82%)
+           1203450      UNC_CHA_TOR_INSERTS.IA_MISS_CRD                                         (11.93%)
+        5059248376 ns   duration_time                                                         
+       5.036229882 seconds time elapsed
+
+------------------------------------------------------------------------
+  [llc_miss_bw]
+------------------------------------------------------------------------
+ Performance counter stats for 'system wide':
+                 0      UNC_CHA_REQUESTS.WRITES_REMOTE   #      0.0 MB/s  llc_miss_remote_memory_bandwidth_write  (22.02%)
+        5020975169 ns   duration_time                                                         
+                 0      UNC_CHA_REQUESTS.READS_REMOTE    #      0.0 MB/s  llc_miss_remote_memory_bandwidth_read  (23.60%)
+        5020983238 ns   duration_time                                                         
+         139844266      UNC_CHA_REQUESTS.WRITES_LOCAL    #   1785.3 MB/s  llc_miss_local_memory_bandwidth_write  (23.72%)
+        5020974905 ns   duration_time                                                         
+        6307941870      UNC_CHA_REQUESTS.READS_LOCAL     #  80530.6 MB/s  llc_miss_local_memory_bandwidth_read  (23.01%)
+        5020965122 ns   duration_time                                                         
+       5.013101438 seconds time elapsed
+
+------------------------------------------------------------------------
+  [memory_bw]
+------------------------------------------------------------------------
+ Performance counter stats for 'system wide':
+        3184946982      UNC_M_CAS_COUNT_SCH0.RD          #  81393.1 MB/s  memory_bandwidth_read
+                                                  #  82938.9 MB/s  memory_bandwidth_total  (50.67%)
+          60520866      UNC_M_CAS_COUNT_SCH1.WR          #   1545.9 MB/s  memory_bandwidth_write  (50.67%)
+          60419008      UNC_M_CAS_COUNT_SCH0.WR                                                 (50.67%)
+        3182761548      UNC_M_CAS_COUNT_SCH1.RD                                                 (50.67%)
+        5007110570 ns   duration_time                                                         
+       5.006978011 seconds time elapsed
+
+------------------------------------------------------------------------
+  [mlc_workload]
+------------------------------------------------------------------------
+ Performance counter stats for 'system wide':
+       14312865726      UNC_M_CAS_COUNT_SCH0.RD          #  52081.0 MB/s  memory_bandwidth_read
+                                                  #  92565.3 MB/s  memory_bandwidth_total  (92.97%)
+       11119934967      UNC_M_CAS_COUNT_SCH1.WR          #  40484.3 MB/s  memory_bandwidth_write  (92.97%)
+       11119884370      UNC_M_CAS_COUNT_SCH0.WR                                                 (92.97%)
+       14297521741      UNC_M_CAS_COUNT_SCH1.RD                                                 (92.97%)
+       35172624600 ns   duration_time                    #    35.16 tma_info_system_time      
+     5072989610470      CPU_CLK_UNHALTED.REF_TSC         #     0.01 tma_info_system_cpu_utilization
+                                                  #     0.90 tma_info_system_cpus_utilized
+                                                  #   249.59 tma_info_system_core_frequency  (75.50%)
+     7914027981838      CPU_CLK_UNHALTED.THREAD                                                 (75.50%)
+     5624894039390      TSC                                                                     (75.50%)
+       35172613948 ns   duration_time                                                         
+     5515264735883      INST_RETIRED.ANY                 # 5515264735883.00 tma_info_inst_mix_instructions
+                                                  #     0.70 tma_info_thread_ipc         (75.54%)
+     7917047960529      CPU_CLK_UNHALTED.THREAD                                                 (75.54%)
+       35172608254 ns   duration_time                                                         
+     7913675889009      CPU_CLK_UNHALTED.THREAD          #     1.00 tma_info_system_mux         (75.84%)
+     7913675889009      CPU_CLK_UNHALTED.THREAD_P                                               (75.84%)
+       35172598321 ns   duration_time                                                         
+      35.158018588 seconds time elapsed
+
+------------------------------------------------------------------------
+  [numa]
+------------------------------------------------------------------------
+ Performance counter stats for 'system wide':
+                 0      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF_REMOTE #    100.0 %  numa_reads_addressed_to_local_dram
+                                                  #      0.0 %  numa_reads_addressed_to_remote_dram  (6.11%)
+        5901637758      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_PREF_LOCAL                                        (6.11%)
+         288106541      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_LOCAL                                        (6.11%)
+                 0      UNC_CHA_TOR_INSERTS.IA_MISS_DRD_REMOTE                                        (6.11%)
+       5.008267937 seconds time elapsed
+
+------------------------------------------------------------------------
+  [summary]
+------------------------------------------------------------------------
+ Performance counter stats for 'system wide':
+      587755149676      CPU_CLK_UNHALTED.REF_TSC         #     0.01 tma_info_system_cpu_utilization
+                                                  #     0.73 tma_info_system_cpus_utilized
+                                                  #   249.07 tma_info_system_core_frequency  (13.69%)
+      915866230798      CPU_CLK_UNHALTED.THREAD                                                 (13.69%)
+      801212445170      TSC                                                                     (13.69%)
+        5037425214 ns   duration_time                    #     5.01 tma_info_system_time      
+      911379053144      INST_RETIRED.ANY                 # 911379053144.00 tma_info_inst_mix_instructions
+                                                  #     1.00 tma_info_thread_ipc         (18.02%)
+      913504659131      CPU_CLK_UNHALTED.THREAD                                                 (18.02%)
+        5037429572 ns   duration_time                                                         
+      910491084585      CPU_CLK_UNHALTED.THREAD          #     1.00 tma_info_system_mux         (20.80%)
+      910491084585      CPU_CLK_UNHALTED.THREAD_P                                               (20.80%)
+        5037434233 ns   duration_time                                                         
+       5.012635389 seconds time elapsed
+
+------------------------------------------------------------------------
+  [tlb]
+------------------------------------------------------------------------
+ Performance counter stats for 'system wide':
+      902959522425      INST_RETIRED.ANY                 #      0.0 per_instr  dtlb_2nd_level_store_mpi  (21.94%)
+          17583287      DTLB_STORE_MISSES.WALK_COMPLETED                                        (21.94%)
+      904536899415      INST_RETIRED.ANY                 #      0.0 per_instr  dtlb_2nd_level_load_mpi  (25.05%)
+           2619837      DTLB_LOAD_MISSES.WALK_COMPLETED                                         (25.05%)
+      897284341606      INST_RETIRED.ANY                 #      0.0 per_instr  itlb_2nd_level_mpi  (21.07%)
+           1124721      ITLB_MISSES.WALK_COMPLETED                                              (21.07%)
+       5.029516559 seconds time elapsed
+
+------------------------------------------------------------------------
+  [tma_l1_l2]
+------------------------------------------------------------------------
+ Performance counter stats for 'system wide':
+     2794252219460      slots                            #     65.2 %  tma_backend_bound      
+                                                  #      1.8 %  tma_bad_speculation    
+                                                  #      4.6 %  tma_frontend_bound     
+                                                  #     28.5 %  tma_retiring           
+                                                  #      6.7 %  tma_core_bound         
+                                                  #      2.0 %  tma_heavy_operations   
+                                                  #     26.5 %  tma_light_operations   
+                                                  #     58.5 %  tma_memory_bound       
+                                                  #      1.0 %  tma_branch_mispredicts 
+                                                  #      1.1 %  tma_fetch_bandwidth    
+                                                  #      3.4 %  tma_fetch_latency      
+                                                  #      0.7 %  tma_machine_clears       (19.82%)
+      839573472739      topdown-retiring                                                        (19.82%)
+      142426326012      topdown-fe-bound                                                        (19.82%)
+     1724627895897      topdown-mem-bound                                                       (19.82%)
+     1920664538429      topdown-be-bound                                                        (19.82%)
+       59574845398      topdown-heavy-ops                                                       (19.82%)
+       30257195147      topdown-br-mispredict                                                   (19.82%)
+      108881264320      topdown-fetch-lat                                                       (19.82%)
+       43767113772      topdown-bad-spec                                                        (19.82%)
+        7684401101      INT_MISC.UOP_DROPPING                                                   (23.79%)
+       5.011123547 seconds time elapsed
+
+------------------------------------------------------------------------
+  [tma_l3_l4]
+------------------------------------------------------------------------
+ Performance counter stats for 'system wide':
+     3718689171257      slots                            #      7.0 %  tma_fused_instructions 
+                                                  #      7.5 %  tma_memory_operations  
+                                                  #      0.0 %  tma_non_fused_branches 
+                                                  #      0.0 %  tma_int_operations     
+                                                  #      0.0 %  tma_int_vector_128b    
+                                                  #      0.0 %  tma_int_vector_256b    
+                                                  #      0.0 %  tma_fp_arith           
+                                                  #      0.0 %  tma_fp_scalar          
+                                                  #      0.0 %  tma_fp_vector          
+                                                  #      0.0 %  tma_x87_use            
+                                                  #      0.6 %  tma_other_light_ops    
+                                                  #      0.0 %  tma_shuffles_256b        (2.29%)
+      575167532789      topdown-retiring                                                        (2.29%)
+      141210948808      topdown-fe-bound                                                        (2.29%)
+     3063747834569      topdown-be-bound                                                        (2.29%)
+        6485657385      topdown-heavy-ops                                                       (2.29%)
+        2947811543      topdown-bad-spec                                                        (2.29%)
+             60180      INT_VEC_RETIRED.ADD_128                                                 (3.05%)
+      262909853327      BR_INST_RETIRED.ALL_BRANCHES                                            (3.81%)
+             74976      FP_ARITH_INST_RETIRED.SCALAR                                            (4.57%)
+      558487591300      UOPS_EXECUTED.THREAD                                                    (4.57%)
+             28870      INT_VEC_RETIRED.ADD_256                                                 (5.33%)
+                 0      UOPS_EXECUTED.X87                                                       (6.08%)
+                 0      FP_ARITH_INST_RETIRED2.SCALAR                                           (6.84%)
+                 0      FP_ARITH_INST_RETIRED.VECTOR                                            (6.84%)
+      280491705908      MEM_UOP_RETIRED.ANY                                                     (6.07%)
+                 0      INT_VEC_RETIRED.VNNI_128                                                (6.07%)
+                 0      FP_ARITH_INST_RETIRED2.VECTOR                                           (6.07%)
+      262700348562      INST_RETIRED.MACRO_FUSED                                                (6.07%)
+                 0      INT_VEC_RETIRED.VNNI_256                                                (6.07%)
+                 0      INT_VEC_RETIRED.MUL_256                                                 (6.07%)
+              1365      INT_VEC_RETIRED.SHUFFLES                                                (6.07%)
+        5952717652 ns   duration_time                                                         
+     3613237275305      slots                            #      0.0 %  tma_nop_instructions     (6.83%)
+      612891245105      topdown-retiring                                                        (6.83%)
+       89079218942      topdown-fe-bound                                                        (6.83%)
+     2980951295437      topdown-be-bound                                                        (6.83%)
+         921570248      topdown-heavy-ops                                                       (6.83%)
+        1619031587      topdown-bad-spec                                                        (6.83%)
+            126959      INT_VEC_RETIRED.ADD_128                                                 (6.83%)
+      263615037744      BR_INST_RETIRED.ALL_BRANCHES                                            (6.83%)
+             24755      FP_ARITH_INST_RETIRED.SCALAR                                            (6.83%)
+      558737659665      UOPS_EXECUTED.THREAD                                                    (6.83%)
+             31759      INT_VEC_RETIRED.ADD_256                                                 (6.83%)
+                 0      UOPS_EXECUTED.X87                                                       (6.83%)
+                 0      FP_ARITH_INST_RETIRED2.SCALAR                                           (6.83%)
+                73      FP_ARITH_INST_RETIRED.VECTOR                                            (6.83%)
+      272083943278      MEM_UOP_RETIRED.ANY                                                     (6.07%)
+                 0      INT_VEC_RETIRED.VNNI_128                                                (6.07%)
+                 0      FP_ARITH_INST_RETIRED2.VECTOR                                           (6.07%)
+      251870050288      INST_RETIRED.MACRO_FUSED                                                (6.07%)
+                 0      INT_VEC_RETIRED.VNNI_256                                                (6.07%)
+                 0      INT_VEC_RETIRED.MUL_256                                                 (6.07%)
+         397759620      INST_RETIRED.NOP                                                        (6.07%)
+        5953284463 ns   duration_time                                                         
+     3569222163988      slots                            #     48.0 %  tma_dram_bound         
+                                                  #     19.6 %  tma_l3_bound           
+                                                  #      4.0 %  tma_data_sharing         (6.83%)
+      598589250609      topdown-retiring                                                        (6.83%)
+      110016381442      topdown-fe-bound                                                        (6.83%)
+     2706186143912      topdown-mem-bound                                                       (6.83%)
+     2955667538600      topdown-be-bound                                                        (6.83%)
+        1530193574      topdown-bad-spec                                                        (6.83%)
+            276680      OCR.DEMAND_DATA_RD.L3_HIT.SNOOP_HIT_WITH_FWD                                        (6.83%)
+      809890077463      MEMORY_ACTIVITY.STALLS_L2_MISS                                          (6.83%)
+           6057564      MEM_LOAD_L3_HIT_RETIRED.XSNP_FWD                                        (6.83%)
+           1127755      MEM_LOAD_L3_HIT_RETIRED.XSNP_NO_FWD                                        (6.83%)
+        7200970607      MEM_LOAD_RETIRED.FB_HIT                                                 (3.04%)
+      575307137747      MEMORY_ACTIVITY.STALLS_L3_MISS                                          (3.04%)
+           7503381      OCR.DEMAND_DATA_RD.L3_HIT.SNOOP_HITM                                        (3.04%)
+      767876611465      CPU_CLK_UNHALTED.REF_TSC                                                (3.80%)
+     1198362300462      CPU_CLK_UNHALTED.THREAD                                                 (4.56%)
+        4504189929      MEM_LOAD_RETIRED.L1_MISS                                                (4.56%)
+      843023198672      TSC                                                                   
+                 0      MEM_LOAD_L3_HIT_RETIRED.XSNP_NO_FWD:R                                      
+                 0      MEM_LOAD_L3_HIT_RETIRED.XSNP_FWD:R                                      
+        5953852620 ns   duration_time                                                         
+     3661470697691      slots                            #     19.0 %  tma_contested_accesses   (5.31%)
+      586466120612      topdown-retiring                                                        (5.31%)
+      143501445991      topdown-fe-bound                                                        (5.31%)
+     2737381460475      topdown-mem-bound                                                       (5.31%)
+     2998085612890      topdown-be-bound                                                        (5.31%)
+        1617824285      topdown-bad-spec                                                        (5.31%)
+            313025      OCR.DEMAND_DATA_RD.L3_HIT.SNOOP_HIT_WITH_FWD                                        (5.31%)
+      815976953044      MEMORY_ACTIVITY.STALLS_L2_MISS                                          (5.31%)
+           6870650      MEM_LOAD_L3_HIT_RETIRED.XSNP_FWD                                        (5.31%)
+        6922953503      MEM_LOAD_RETIRED.FB_HIT                                                 (3.79%)
+      593782442243      MEMORY_ACTIVITY.STALLS_L3_MISS                                          (3.04%)
+           6096726      OCR.DEMAND_DATA_RD.L3_HIT.SNOOP_HITM                                        (3.04%)
+              5069      MEM_LOAD_L3_HIT_RETIRED.XSNP_MISS                                        (3.04%)
+      782678500641      CPU_CLK_UNHALTED.REF_TSC                                                (3.80%)
+     1222709184844      CPU_CLK_UNHALTED.THREAD                                                 (4.55%)
+        4594863084      MEM_LOAD_RETIRED.L1_MISS                                                (4.55%)
+      843018338340      TSC                                                                   
+                 0      MEM_LOAD_L3_HIT_RETIRED.XSNP_FWD:R                                      
+                 0      MEM_LOAD_L3_HIT_RETIRED.XSNP_MISS:R                                      
+        5954459898 ns   duration_time                                                         
+     3863224398080      slots                            #      0.0 %  tma_divider            
+                                                  #      8.5 %  tma_ports_utilization  
+                                                  #      0.0 %  tma_ports_utilized_0   
+                                                  #      7.7 %  tma_ports_utilized_1   
+                                                  #      7.4 %  tma_ports_utilized_3m    (1.25%)
+      574754394427      topdown-retiring                                                        (1.25%)
+      120225858318      topdown-fe-bound                                                        (1.25%)
+     2962485840226      topdown-mem-bound                                                       (1.25%)
+     3188351900409      topdown-be-bound                                                        (1.25%)
+       10805143264      topdown-bad-spec                                                        (1.25%)
+       95040334370      UOPS_EXECUTED.CYCLES_GE_3                                               (1.25%)
+       40605070207      RESOURCE_STALLS.SCOREBOARD                                              (1.25%)
+      989595731166      EXE_ACTIVITY.BOUND_ON_LOADS                                             (1.25%)
+        9701457793      EXE_ACTIVITY.EXE_BOUND_0_PORTS                                          (1.25%)
+          22378592      ARITH.DIV_ACTIVE                                                        (1.25%)
+       99435349911      EXE_ACTIVITY.1_PORTS_UTIL                                               (1.25%)
+       70116430711      EXE_ACTIVITY.2_3_PORTS_UTIL                                             (1.25%)
+     1284175049003      CPU_CLK_UNHALTED.THREAD                                                 (1.25%)
+     1044364593497      CYCLE_ACTIVITY.STALLS_TOTAL                                             (1.25%)
+        5959544455 ns   duration_time                                                         
+     3886123377209      slots                            #      3.2 %  tma_ports_utilized_2     (0.84%)
+      527811622129      topdown-retiring                                                        (0.84%)
+      102337469945      topdown-fe-bound                                                        (0.84%)
+     3048901208839      topdown-mem-bound                                                       (0.84%)
+     3269821573415      topdown-be-bound                                                        (0.84%)
+        8749682506      topdown-bad-spec                                                        (0.84%)
+       34830666486      RESOURCE_STALLS.SCOREBOARD                                              (0.84%)
+     1021844181782      EXE_ACTIVITY.BOUND_ON_LOADS                                             (0.84%)
+        8909873513      EXE_ACTIVITY.EXE_BOUND_0_PORTS                                          (0.84%)
+          18610802      ARITH.DIV_ACTIVE                                                        (0.84%)
+       90970316972      EXE_ACTIVITY.1_PORTS_UTIL                                               (0.84%)
+       64449418285      EXE_ACTIVITY.2_3_PORTS_UTIL                                             (0.84%)
+     1292725724214      CPU_CLK_UNHALTED.THREAD                                                 (0.84%)
+       40873250759      EXE_ACTIVITY.2_PORTS_UTIL                                               (0.84%)
+     1072654912745      CYCLE_ACTIVITY.STALLS_TOTAL                                             (0.84%)
+        5960208749 ns   duration_time                                                         
+     3769219407202      slots                            #     33.5 %  tma_l3_hit_latency       (5.31%)
+      587813409767      topdown-retiring                                                        (5.31%)
+      132861702203      topdown-fe-bound                                                        (5.31%)
+     2866221222522      topdown-mem-bound                                                       (5.31%)
+     3135113033337      topdown-be-bound                                                        (5.31%)
+        1427821529      topdown-bad-spec                                                        (5.31%)
+      832490374550      MEMORY_ACTIVITY.STALLS_L2_MISS                                          (5.31%)
+          25625106      MEM_LOAD_RETIRED.L3_HIT                                                 (5.31%)
+        6964400214      MEM_LOAD_RETIRED.FB_HIT                                                 (5.31%)
+      607927716081      MEMORY_ACTIVITY.STALLS_L3_MISS                                          (3.80%)
+      793050488728      CPU_CLK_UNHALTED.REF_TSC                                                (4.56%)
+     1238038515274      CPU_CLK_UNHALTED.THREAD                                                 (5.31%)
+        4665656275      MEM_LOAD_RETIRED.L1_MISS                                                (4.55%)
+      843015685230      TSC                                                                   
+                 0      MEM_LOAD_RETIRED.L3_HIT:R                                             
+        5960709697 ns   duration_time                                                         
+     3782727513896      slots                            #      0.4 %  tma_l2_bound           
+                                                  #    371.1 %  tma_l2_hit_latency       (5.31%)
+      585352750529      topdown-retiring                                                        (5.31%)
+      131688528211      topdown-fe-bound                                                        (5.31%)
+     2888838280773      topdown-mem-bound                                                       (5.31%)
+     3149663862385      topdown-be-bound                                                        (5.31%)
+        1396647747      topdown-bad-spec                                                        (5.31%)
+      846168923175      MEMORY_ACTIVITY.STALLS_L2_MISS                                          (5.31%)
+        6969404185      MEM_LOAD_RETIRED.FB_HIT                                                 (5.31%)
+      851287832733      MEMORY_ACTIVITY.STALLS_L1D_MISS                                         (5.31%)
+      801946385194      CPU_CLK_UNHALTED.REF_TSC                                                (5.31%)
+     1252396038436      CPU_CLK_UNHALTED.THREAD                                                 (6.07%)
+        4720511566      MEM_LOAD_RETIRED.L1_MISS                                                (5.31%)
+      843012297574      TSC                                                                   
+        2426206405      MEM_LOAD_RETIRED.L2_HIT                                                 (4.55%)
+                 0      MEM_LOAD_RETIRED.L2_HIT:R                                             
+        5961172509 ns   duration_time                                                         
+     3812736587182      slots                            #      7.3 %  tma_l1_bound           
+                                                  #      7.9 %  tma_l1_latency_dependency  (5.31%)
+      584041918900      topdown-retiring                                                        (5.31%)
+      130594514816      topdown-fe-bound                                                        (5.31%)
+     2921740885797      topdown-mem-bound                                                       (5.31%)
+     3188642753996      topdown-be-bound                                                        (5.31%)
+        1395575220      topdown-bad-spec                                                        (5.31%)
+      956082506913      EXE_ACTIVITY.BOUND_ON_LOADS                                             (6.07%)
+        6979002561      MEM_LOAD_RETIRED.FB_HIT                                                 (6.07%)
+      863639458130      MEMORY_ACTIVITY.STALLS_L1D_MISS                                         (6.07%)
+      264701322155      MEM_INST_RETIRED.ALL_LOADS                                              (4.55%)
+     1273061133447      CPU_CLK_UNHALTED.THREAD                                                 (5.31%)
+        4773909584      MEM_LOAD_RETIRED.L1_MISS                                                (5.31%)
+      884651099294      MEMORY_ACTIVITY.CYCLES_L1D_MISS                                         (3.80%)
+     1202590418722      CYCLE_ACTIVITY.CYCLES_MEM_ANY                                           (4.55%)
+        5961644655 ns   duration_time                                                         
+     3864382003666      slots                            #      0.1 %  tma_itlb_misses        
+                                                  #      0.0 %  tma_code_stlb_miss     
+                                                  #      0.0 %  tma_code_stlb_hit        (5.31%)
+      585990651384      topdown-retiring                                                        (5.31%)
+      124106361126      topdown-fe-bound                                                        (5.31%)
+     3251863222224      topdown-be-bound                                                        (5.31%)
+      113174594422      topdown-fetch-lat                                                       (5.31%)
+        1426949380      topdown-bad-spec                                                        (5.31%)
+            126642      FRONTEND_RETIRED.STLB_MISS                                              (6.07%)
+            193788      FRONTEND_RETIRED.ITLB_MISS                                              (0.76%)
+        6562558080      INT_MISC.UOP_DROPPING                                                   (1.52%)
+     1288892288587      CPU_CLK_UNHALTED.THREAD                                                 (2.28%)
+        1045699394      ICACHE_TAG.STALLS                                                       (3.04%)
+                 0      FRONTEND_RETIRED.STLB_MISS:R                                          
+                 0      FRONTEND_RETIRED.ITLB_MISS:R                                          
+        5962064893 ns   duration_time                                                         
+     3889398479663      slots                            #      0.1 %  tma_icache_misses      
+                                                  #      0.0 %  tma_code_l2_miss       
+                                                  #      0.0 %  tma_code_l2_hit          (3.80%)
+      578820246359      topdown-retiring                                                        (3.80%)
+      151958987613      topdown-fe-bound                                                        (3.80%)
+     3233777565720      topdown-be-bound                                                        (3.80%)
+      143777186345      topdown-fetch-lat                                                       (3.80%)
+        1927036419      topdown-bad-spec                                                        (3.80%)
+           3473187      FRONTEND_RETIRED.L1I_MISS                                               (3.80%)
+            967034      FRONTEND_RETIRED.L2_MISS                                                (0.76%)
+        6709867885      INT_MISC.UOP_DROPPING                                                   (1.52%)
+     1298625235743      CPU_CLK_UNHALTED.THREAD                                                 (2.28%)
+        1055386029      ICACHE_DATA.STALLS                                                      (3.04%)
+                 0      FRONTEND_RETIRED.L1I_MISS:R                                           
+                 0      FRONTEND_RETIRED.L2_MISS:R                                            
+        5966551512 ns   duration_time                                                         
+     3891468883048      slots                            #      3.3 %  tma_store_bound        
+                                                  #     34.5 %  tma_store_latency        (0.83%)
+      528968424188      topdown-retiring                                                        (0.83%)
+       96998353779      topdown-fe-bound                                                        (0.83%)
+     3059430729308      topdown-mem-bound                                                       (0.83%)
+     3281194419221      topdown-be-bound                                                        (0.83%)
+        7956956975      topdown-bad-spec                                                        (0.83%)
+      441758969940      OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DEMAND_RFO                                        (0.83%)
+          44976480      MEM_INST_RETIRED.LOCK_LOADS                                             (0.83%)
+        4952516439      MEM_INST_RETIRED.ALL_STORES                                             (0.83%)
+       42876726732      EXE_ACTIVITY.BOUND_ON_STORES                                            (0.83%)
+     1295094791955      CPU_CLK_UNHALTED.THREAD                                                 (0.83%)
+         968102859      MEM_STORE_RETIRED.L2_HIT                                                (0.83%)
+        5967214535 ns   duration_time                                                         
+     3898720700124      slots                            #   1821.2 %  tma_false_sharing        (0.84%)
+      530189131753      topdown-retiring                                                        (0.84%)
+       98227502772      topdown-fe-bound                                                        (0.84%)
+     3066740085750      topdown-mem-bound                                                       (0.84%)
+     3287732348064      topdown-be-bound                                                        (0.84%)
+        7659884193      topdown-bad-spec                                                        (0.84%)
+       42709492612      EXE_ACTIVITY.BOUND_ON_STORES                                            (0.84%)
+           7843245      OCR.DEMAND_RFO.L3_HIT.SNOOP_HITM                                        (0.84%)
+         552272117      cpu/OCR.DEMAND_RFO.L3_MISS,offcore_rsp=0x103b800002/                                        (0.84%)
+      831116698444      CPU_CLK_UNHALTED.REF_TSC                                                (0.84%)
+     1297055251027      CPU_CLK_UNHALTED.THREAD                                                 (0.84%)
+      841679194865      TSC                                                                     (0.84%)
+        5967865534 ns   duration_time                                                         
+     3902201264950      slots                            #      2.3 %  tma_dtlb_store           (0.84%)
+      528671498568      topdown-retiring                                                        (0.84%)
+      101565414370      topdown-fe-bound                                                        (0.84%)
+     3067060831280      topdown-mem-bound                                                       (0.84%)
+     3289466631332      topdown-be-bound                                                        (0.84%)
+        7429285308      topdown-bad-spec                                                        (0.84%)
+          52860839      MEM_INST_RETIRED.STLB_HIT_STORES                                        (0.84%)
+       14801627962      DTLB_STORE_MISSES.WALK_ACTIVE                                           (0.84%)
+       46059424966      EXE_ACTIVITY.BOUND_ON_STORES                                            (0.84%)
+     1298074220817      CPU_CLK_UNHALTED.THREAD                                                 (0.84%)
+      649037126335      CPU_CLK_UNHALTED.DISTRIBUTED                                            (0.84%)
+                 0      MEM_INST_RETIRED.STLB_HIT_STORES:R                                      
+        5968442484 ns   duration_time                                                         
+     3897214670714      slots                            #      0.3 %  tma_dtlb_load            (0.83%)
+      527904008290      topdown-retiring                                                        (0.83%)
+       96626437911      topdown-fe-bound                                                        (0.83%)
+     3069952519127      topdown-mem-bound                                                       (0.83%)
+     3289632464448      topdown-be-bound                                                        (0.83%)
+        7656694249      topdown-bad-spec                                                        (0.83%)
+     1026420982571      EXE_ACTIVITY.BOUND_ON_LOADS                                             (0.83%)
+      925522327719      MEMORY_ACTIVITY.STALLS_L1D_MISS                                         (0.83%)
+           3808029      MEM_INST_RETIRED.STLB_HIT_LOADS                                         (0.83%)
+     1298117001471      CPU_CLK_UNHALTED.THREAD                                                 (0.83%)
+        4122504715      DTLB_LOAD_MISSES.WALK_ACTIVE                                            (0.83%)
+                 0      MEM_INST_RETIRED.STLB_HIT_LOADS:R                                      
+        5968662369 ns   duration_time                                                         
+     3895572155706      slots                            #      0.1 %  tma_mite               
+                                                  #      0.0 %  tma_decoder0_alone       (0.84%)
+      525412466239      topdown-retiring                                                        (0.84%)
+       99874621407      topdown-fe-bound                                                        (0.84%)
+     3287556865475      topdown-be-bound                                                        (0.84%)
+       95338259070      topdown-fetch-lat                                                       (0.84%)
+        6441525734      topdown-bad-spec                                                        (0.84%)
+        1491590573      IDQ.MITE_CYCLES_ANY                                                     (0.84%)
+        6522832201      INT_MISC.UOP_DROPPING                                                   (0.84%)
+         329461463      IDQ.MITE_CYCLES_OK                                                      (0.84%)
+         417097588      cpu/INST_DECODED.DECODERS,cmask=0x1/                                        (0.84%)
+      648699125168      CPU_CLK_UNHALTED.DISTRIBUTED                                            (0.84%)
+         298985051      cpu/INST_DECODED.DECODERS,cmask=0x2/                                        (0.84%)
+        5969192257 ns   duration_time                                                         
+     3895165982316      slots                            #      0.1 %  tma_ms                   (0.84%)
+      525408718929      topdown-retiring                                                        (0.84%)
+      100560404137      topdown-fe-bound                                                        (0.84%)
+     3285248587675      topdown-be-bound                                                        (0.84%)
+       96686375285      topdown-fetch-lat                                                       (0.84%)
+        6476051372      topdown-bad-spec                                                        (0.84%)
+        6541534735      INT_MISC.UOP_DROPPING                                                   (0.84%)
+        1414609777      cpu/UOPS_RETIRED.MS,cmask=0x1/                                          (0.84%)
+      517363476079      UOPS_RETIRED.SLOTS                                                      (0.84%)
+        1496099817      IDQ.MS_CYCLES_ANY                                                       (0.84%)
+      537230975719      UOPS_ISSUED.ANY                                                         (0.84%)
+      648043516443      CPU_CLK_UNHALTED.DISTRIBUTED                                            (0.84%)
+        5973762943 ns   duration_time                                                         
+     3896743709046      slots                            #      0.0 %  tma_ind_call_mispredicts
+                                                  #      0.0 %  tma_ind_jump_mispredicts  (0.84%)
+      524270765358      topdown-retiring                                                        (0.84%)
+       99171080368      topdown-fe-bound                                                        (0.84%)
+     3287154039172      topdown-be-bound                                                        (0.84%)
+        1757595022      topdown-br-mispredict                                                   (0.84%)
+        7032491186      topdown-bad-spec                                                        (0.84%)
+        6524796833      INT_MISC.UOP_DROPPING                                                   (0.84%)
+           1004714      BR_MISP_RETIRED.INDIRECT_COST                                           (0.84%)
+            343432      BR_MISP_RETIRED.INDIRECT_CALL_COST                                        (0.84%)
+     1296949908722      CPU_CLK_UNHALTED.THREAD                                                 (0.84%)
+                 0      BR_MISP_RETIRED.INDIRECT_CALL_COST:R                                      
+                 0      BR_MISP_RETIRED.INDIRECT_COST:R                                       
+        5974167553 ns   duration_time                                                         
+     3895266034806      slots                            #     14.0 %  tma_sq_full              (0.84%)
+      524570519169      topdown-retiring                                                        (0.84%)
+       96943874585      topdown-fe-bound                                                        (0.84%)
+     3074746801873      topdown-mem-bound                                                       (0.84%)
+     3290727325623      topdown-be-bound                                                        (0.84%)
+        6959980856      topdown-bad-spec                                                        (0.84%)
+      921245147393      MEMORY_ACTIVITY.STALLS_L2_MISS                                          (0.84%)
+      627069964488      MEMORY_ACTIVITY.STALLS_L3_MISS                                          (0.84%)
+         699419301      L1D_PEND_MISS.L2_STALLS                                                 (0.84%)
+     1296260805324      CPU_CLK_UNHALTED.THREAD                                                 (0.84%)
+      180946632513      XQ.FULL_CYCLES                                                          (0.84%)
+        5974580013 ns   duration_time                                                         
+     3889755796150      slots                            #      0.1 %  tma_branch_resteers    
+                                                  #      0.0 %  tma_unknown_branches   
+                                                  #      0.0 %  tma_clears_resteers    
+                                                  #      0.0 %  tma_mispredicts_resteers  (0.83%)
+      524028878938      topdown-retiring                                                        (0.83%)
+       97647739280      topdown-fe-bound                                                        (0.83%)
+     3282774796159      topdown-be-bound                                                        (0.83%)
+        1626841871      topdown-br-mispredict                                                   (0.83%)
+       91971306840      topdown-fetch-lat                                                       (0.83%)
+        7314080429      topdown-bad-spec                                                        (0.83%)
+        6491940166      INT_MISC.UOP_DROPPING                                                   (0.83%)
+     1294327962942      CPU_CLK_UNHALTED.THREAD                                                 (0.83%)
+         289111976      INT_MISC.UNKNOWN_BRANCH_CYCLES                                          (0.83%)
+         720140042      INT_MISC.CLEAR_RESTEER_CYCLES                                           (0.83%)
+        5974951385 ns   duration_time                                                         
+     3884778220141      slots                            #      0.0 %  tma_lock_latency         (0.84%)
+      523184039965      topdown-retiring                                                        (0.84%)
+       97950546490      topdown-fe-bound                                                        (0.84%)
+     3063898436502      topdown-mem-bound                                                       (0.84%)
+     3281147426366      topdown-be-bound                                                        (0.84%)
+        6405154027      topdown-bad-spec                                                        (0.84%)
+     1018599970380      EXE_ACTIVITY.BOUND_ON_LOADS                                             (0.84%)
+          34708554      MEM_INST_RETIRED.LOCK_LOADS                                             (0.84%)
+      920113613750      MEMORY_ACTIVITY.STALLS_L1D_MISS                                         (0.84%)
+     1292719236419      CPU_CLK_UNHALTED.THREAD                                                 (0.84%)
+                 0      MEM_INST_RETIRED.LOCK_LOADS:R                                         
+        5975255044 ns   duration_time                                                         
+     3876157374573      slots                            #      0.1 %  tma_ms_switches          (0.84%)
+      522429722445      topdown-retiring                                                        (0.84%)
+       94098645161      topdown-fe-bound                                                        (0.84%)
+     3275989586047      topdown-be-bound                                                        (0.84%)
+       88624338492      topdown-fetch-lat                                                       (0.84%)
+        6456941419      topdown-bad-spec                                                        (0.84%)
+        6466028119      INT_MISC.UOP_DROPPING                                                   (0.84%)
+      515103360107      UOPS_RETIRED.SLOTS                                                      (0.84%)
+         598703943      cpu/UOPS_RETIRED.MS,cmask=0x1,edge=0x1/                                        (0.84%)
+     1290719876320      CPU_CLK_UNHALTED.THREAD                                                 (0.84%)
+      534782135413      UOPS_ISSUED.ANY                                                         (0.84%)
+        5975526162 ns   duration_time                                                         
+     3867712627954      slots                            #      0.0 %  tma_store_fwd_blk        (0.84%)
+      521653940803      topdown-retiring                                                        (0.84%)
+       92130231286      topdown-fe-bound                                                        (0.84%)
+     3055638544952      topdown-mem-bound                                                       (0.84%)
+     3271326579451      topdown-be-bound                                                        (0.84%)
+        6144817173      topdown-bad-spec                                                        (0.84%)
+     1013094902140      EXE_ACTIVITY.BOUND_ON_LOADS                                             (0.84%)
+      916430035788      MEMORY_ACTIVITY.STALLS_L1D_MISS                                         (0.84%)
+     1288606665744      CPU_CLK_UNHALTED.THREAD                                                 (0.84%)
+          26366706      LD_BLOCKS.STORE_FORWARD                                                 (0.84%)
+        5975775998 ns   duration_time                                                         
+     3870991128628      slots                            #      0.0 %  tma_split_stores         (0.84%)
+      521562936135      topdown-retiring                                                        (0.84%)
+       99408784730      topdown-fe-bound                                                        (0.84%)
+     3049696214785      topdown-mem-bound                                                       (0.84%)
+     3264610207065      topdown-be-bound                                                        (0.84%)
+        6925708795      topdown-bad-spec                                                        (0.84%)
+       52528438012      EXE_ACTIVITY.BOUND_ON_STORES                                            (0.84%)
+           8430331      MEM_INST_RETIRED.SPLIT_STORES                                           (0.84%)
+     1288092350867      CPU_CLK_UNHALTED.THREAD                                                 (0.84%)
+                 0      MEM_INST_RETIRED.SPLIT_STORES:R                                       
+        5975579264 ns   duration_time                                                         
+     3863413408766      slots                            #      2.1 %  tma_serializing_operation
+                                                  #      0.0 %  tma_c02_wait           
+                                                  #      0.0 %  tma_slow_pause           (0.84%)
+      520941726951      topdown-retiring                                                        (0.84%)
+       99586598328      topdown-fe-bound                                                        (0.84%)
+     3043410084029      topdown-mem-bound                                                       (0.84%)
+     3256042959798      topdown-be-bound                                                        (0.84%)
+        6667541122      topdown-bad-spec                                                        (0.84%)
+       26754734206      RESOURCE_STALLS.SCOREBOARD                                              (0.84%)
+         492623876      CPU_CLK_UNHALTED.PAUSE                                                  (0.84%)
+     1285933126170      CPU_CLK_UNHALTED.THREAD                                                 (0.84%)
+                 0      CPU_CLK_UNHALTED.C02                                                    (0.84%)
+        5975791236 ns   duration_time                                                         
+     3857489986911      slots                            #      0.0 %  tma_memory_fence         (0.84%)
+      522040178288      topdown-retiring                                                        (0.84%)
+       98825680945      topdown-fe-bound                                                        (0.84%)
+     3035658237651      topdown-mem-bound                                                       (0.84%)
+     3251282654838      topdown-be-bound                                                        (0.84%)
+        6591445533      topdown-bad-spec                                                        (0.84%)
+       26519919946      RESOURCE_STALLS.SCOREBOARD                                              (0.84%)
+           2841668      MISC2_RETIRED.LFENCE                                                    (0.84%)
+     1283776986727      CPU_CLK_UNHALTED.THREAD                                                 (0.84%)
+                 0      CPU_CLK_UNHALTED.C02                                                    (0.84%)
+        5975972373 ns   duration_time                                                         
+     3848706176304      slots                            #     67.9 %  tma_mem_bandwidth      
+                                                  #      4.9 %  tma_mem_latency          (0.84%)
+      521315959627      topdown-retiring                                                        (0.84%)
+       96730418338      topdown-fe-bound                                                        (0.84%)
+     3029491847891      topdown-mem-bound                                                       (0.84%)
+     3243673381271      topdown-be-bound                                                        (0.84%)
+        7522241827      topdown-bad-spec                                                        (0.84%)
+      933303415246      OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DATA_RD                                        (0.84%)
+      622327483431      MEMORY_ACTIVITY.STALLS_L3_MISS                                          (0.84%)
+     1281655699794      CPU_CLK_UNHALTED.THREAD                                                 (0.84%)
+      870340939071      cpu/OFFCORE_REQUESTS_OUTSTANDING.DATA_RD,cmask=0x4/                                        (0.84%)
+        5976107542 ns   duration_time                                                         
+     3837853288897      slots                            #      0.0 %  tma_c01_wait             (0.83%)
+      524385758043      topdown-retiring                                                        (0.83%)
+       98649408309      topdown-fe-bound                                                        (0.83%)
+     3013539678926      topdown-mem-bound                                                       (0.83%)
+     3228804986687      topdown-be-bound                                                        (0.83%)
+        7149919930      topdown-bad-spec                                                        (0.83%)
+       26789257379      RESOURCE_STALLS.SCOREBOARD                                              (0.83%)
+                 0      CPU_CLK_UNHALTED.C01                                                    (0.83%)
+     1278492500654      CPU_CLK_UNHALTED.THREAD                                                 (0.83%)
+                 0      CPU_CLK_UNHALTED.C02                                                    (0.83%)
+        5976237756 ns   duration_time                                                         
+     3823032686649      slots                            #      0.0 %  tma_ret_mispredicts      (0.82%)
+      530883341946      topdown-retiring                                                        (0.82%)
+       95496052104      topdown-fe-bound                                                        (0.82%)
+     3208444396906      topdown-be-bound                                                        (0.82%)
+        1729280603      topdown-br-mispredict                                                   (0.82%)
+        6857438523      topdown-bad-spec                                                        (0.82%)
+            111718      BR_MISP_RETIRED.RET_COST                                                (0.82%)
+        6509454907      INT_MISC.UOP_DROPPING                                                   (0.82%)
+     1275648757601      CPU_CLK_UNHALTED.THREAD                                                 (0.82%)
+                 0      BR_MISP_RETIRED.RET_COST:R                                            
+        5980411290 ns   duration_time                                                         
+     3813798879443      slots                            #      0.0 %  tma_other_mispredicts    (0.81%)
+      539719104329      topdown-retiring                                                        (0.81%)
+       97205951385      topdown-fe-bound                                                        (0.81%)
+     3185065441278      topdown-be-bound                                                        (0.81%)
+        2223603013      topdown-br-mispredict                                                   (0.81%)
+        6609945934      topdown-bad-spec                                                        (0.81%)
+          39294957      INT_MISC.CLEARS_COUNT                                                   (0.81%)
+        6608274452      INT_MISC.UOP_DROPPING                                                   (0.81%)
+           7768825      BR_MISP_RETIRED.ALL_BRANCHES                                            (0.81%)
+          10672937      MACHINE_CLEARS.COUNT                                                    (0.81%)
+        5980590395 ns   duration_time                                                         
+     3810029735186      slots                            #      0.1 %  tma_dsb                  (0.79%)
+      548460817354      topdown-retiring                                                        (0.79%)
+       97899493063      topdown-fe-bound                                                        (0.79%)
+     3169586854458      topdown-be-bound                                                        (0.79%)
+       89711715477      topdown-fetch-lat                                                       (0.79%)
+        5979286748      topdown-bad-spec                                                        (0.79%)
+         495324643      IDQ.DSB_CYCLES_OK                                                       (0.79%)
+        1765123208      IDQ.DSB_CYCLES_ANY                                                      (0.79%)
+        6708272318      INT_MISC.UOP_DROPPING                                                   (0.79%)
+      635991623994      CPU_CLK_UNHALTED.DISTRIBUTED                                            (0.79%)
+        5980684891 ns   duration_time                                                         
+     3808778832275      slots                            #      0.0 %  tma_cond_tk_mispredicts  (0.78%)
+      557833842530      topdown-retiring                                                        (0.78%)
+       96675699430      topdown-fe-bound                                                        (0.78%)
+     3158225279628      topdown-be-bound                                                        (0.78%)
+        1645818786      topdown-br-mispredict                                                   (0.78%)
+        5572515697      topdown-bad-spec                                                        (0.78%)
+        6799608409      INT_MISC.UOP_DROPPING                                                   (0.78%)
+           4463207      BR_MISP_RETIRED.COND_TAKEN_COST                                         (0.78%)
+     1271367864773      CPU_CLK_UNHALTED.THREAD                                                 (0.78%)
+                 0      BR_MISP_RETIRED.COND_TAKEN_COST:R                                      
+        5980779192 ns   duration_time                                                         
+     3803706476694      slots                            #      0.0 %  tma_cond_nt_mispredicts  (0.77%)
+      563503255856      topdown-retiring                                                        (0.77%)
+       98586231358      topdown-fe-bound                                                        (0.77%)
+     3145878192846      topdown-be-bound                                                        (0.77%)
+        1799795168      topdown-br-mispredict                                                   (0.77%)
+        6021164322      topdown-bad-spec                                                        (0.77%)
+           2912370      BR_MISP_RETIRED.COND_NTAKEN_COST                                        (0.77%)
+        6894650709      INT_MISC.UOP_DROPPING                                                   (0.77%)
+     1270567252545      CPU_CLK_UNHALTED.THREAD                                                 (0.77%)
+                 0      BR_MISP_RETIRED.COND_NTAKEN_COST:R                                      
+        5980854440 ns   duration_time                                                         
+     3799921648993      slots                            #      0.0 %  tma_streaming_stores     (0.76%)
+      566707849761      topdown-retiring                                                        (0.76%)
+       96779210396      topdown-fe-bound                                                        (0.76%)
+     2915260654153      topdown-mem-bound                                                       (0.76%)
+     3141813266631      topdown-be-bound                                                        (0.76%)
+        5768380530      topdown-bad-spec                                                        (0.76%)
+       75673158031      EXE_ACTIVITY.BOUND_ON_STORES                                            (0.76%)
+                 0      OCR.STREAMING_WR.ANY_RESPONSE                                           (0.76%)
+     1269216755501      CPU_CLK_UNHALTED.THREAD                                                 (0.76%)
+        5980911413 ns   duration_time                                                         
+     3794797029938      slots                            #      0.0 %  tma_fp_divider         
+                                                  #      0.0 %  tma_int_divider          (0.76%)
+      567544289696      topdown-retiring                                                        (0.76%)
+       95426086518      topdown-fe-bound                                                        (0.76%)
+     2910675154559      topdown-mem-bound                                                       (0.76%)
+     3136278045119      topdown-be-bound                                                        (0.76%)
+        6021113948      topdown-bad-spec                                                        (0.76%)
+             28794      ARITH.FPDIV_ACTIVE                                                      (0.76%)
+          24646650      ARITH.DIV_ACTIVE                                                        (0.76%)
+     1267939624757      CPU_CLK_UNHALTED.THREAD                                                 (0.76%)
+        5968766666 ns   duration_time                                                         
+     3783822678406      slots                            #      0.2 %  tma_other_nukes          (0.76%)
+      567509708097      topdown-retiring                                                        (0.76%)
+       94477459357      topdown-fe-bound                                                        (0.76%)
+     3129543054496      topdown-be-bound                                                        (0.76%)
+        1800522022      topdown-br-mispredict                                                   (0.76%)
+        6065026705      topdown-bad-spec                                                        (0.76%)
+        6863788488      INT_MISC.UOP_DROPPING                                                   (0.76%)
+           8971606      MACHINE_CLEARS.COUNT                                                    (0.76%)
+           1889563      MACHINE_CLEARS.MEMORY_ORDERING                                          (0.76%)
+        5968814285 ns   duration_time                                                         
+     3777344972216      slots                            #      0.0 %  tma_lcp                  (0.76%)
+      566645808762      topdown-retiring                                                        (0.76%)
+       93815748318      topdown-fe-bound                                                        (0.76%)
+     3121729992806      topdown-be-bound                                                        (0.76%)
+       86583997765      topdown-fetch-lat                                                       (0.76%)
+        6536771130      topdown-bad-spec                                                        (0.76%)
+           3342756      DECODE.LCP                                                              (0.76%)
+        6889730663      INT_MISC.UOP_DROPPING                                                   (0.76%)
+     1263986091734      CPU_CLK_UNHALTED.THREAD                                                 (0.76%)
+        5968829844 ns   duration_time                                                         
+     3772989959857      slots                            #      0.3 %  tma_dsb_switches         (0.76%)
+      567067040625      topdown-retiring                                                        (0.76%)
+       92270512939      topdown-fe-bound                                                        (0.76%)
+     3120559750554      topdown-be-bound                                                        (0.76%)
+       84985306044      topdown-fetch-lat                                                       (0.76%)
+        5547445550      topdown-bad-spec                                                        (0.76%)
+        3570356771      DSB2MITE_SWITCHES.PENALTY_CYCLES                                        (0.76%)
+        6858512435      INT_MISC.UOP_DROPPING                                                   (0.76%)
+     1262112710908      CPU_CLK_UNHALTED.THREAD                                                 (0.76%)
+        5968858484 ns   duration_time                                                         
+     3766420733582      slots                            #      0.3 %  tma_few_uops_instructions
+                                                  #      0.1 %  tma_microcode_sequencer
+                                                  #      0.0 %  tma_assists            
+                                                  #      0.1 %  tma_cisc                 (0.76%)
+      565986693029      topdown-retiring                                                        (0.76%)
+       92479115092      topdown-fe-bound                                                        (0.76%)
+     3114880819193      topdown-be-bound                                                        (0.76%)
+       13823811505      topdown-heavy-ops                                                       (0.76%)
+        5215265790      topdown-bad-spec                                                        (0.76%)
+        3589994647      UOPS_RETIRED.MS                                                         (0.76%)
+           2043883      ASSISTS.ANY                                                             (0.76%)
+        5968881172 ns   duration_time                                                         
+     3751147466865      slots                            #      0.0 %  tma_amx_busy             (0.76%)
+      566762104275      topdown-retiring                                                        (0.76%)
+       93059150757      topdown-fe-bound                                                        (0.76%)
+     2868897142039      topdown-mem-bound                                                       (0.76%)
+     3096413752032      topdown-be-bound                                                        (0.76%)
+        6215122065      topdown-bad-spec                                                        (0.76%)
+                 0      EXE.AMX_BUSY                                                            (0.76%)
+      627979550816      CPU_CLK_UNHALTED.DISTRIBUTED                                            (0.76%)
+        5968899556 ns   duration_time                                                         
+           3109603      MEM_INST_RETIRED.SPLIT_LOADS     #      0.1 %  tma_split_loads          (1.52%)
+     4815630382641      L1D_PEND_MISS.PENDING                                                   (1.52%)
+     1254698804052      CPU_CLK_UNHALTED.THREAD                                                 (1.52%)
+       13985268471      MEM_LOAD_COMPLETED.L1_MISS_ANY                                          (1.52%)
+                 0      MEM_INST_RETIRED.SPLIT_LOADS:R                                        
+        5968930671 ns   duration_time                                                         
+      645269990148      L1D_PEND_MISS.FB_FULL            #     51.5 %  tma_fb_full              (2.28%)
+     1254164454947      CPU_CLK_UNHALTED.THREAD                                                 (2.28%)
+        5968953606 ns   duration_time                                                         
+       5.256059791 seconds time elapsed
+
+------------------------------------------------------------------------
+  [turbostat]
+------------------------------------------------------------------------
+turbostat version 2024.07.26 - Len Brown <lenb@kernel.org>
+Kernel command line: BOOT_IMAGE=/vmlinuz-6.12.47-11.0.1s0c1r5.el9.x86_64 root=/dev/mapper/ahv-root ro crashkernel=1G-4G:192M,4G-64G:256M,64G-4096G:512M,4096G-:1G nomodeset biosdevname=0 rhgb quiet intel_iommu=on iommu=pt fips=1 audit=1 split_lock_detect=off indirect_target_selection=vmexit audit_backlog_limit=8192 net.ifnames=0 systemd.unified_cgroup_hierarchy=1 boot=/dev/disk/by-label/boot page_poison=0 init_on_free=0 spec_rstack_overflow=microcode l1tf=flush,nowarn retbleed=off
+CPUID(0): GenuineIntel 0x24 CPUID levels
+CPUID(1): family:model:stepping 0x6:ad:1 (6:173:1) microcode 0xa000124
+CPUID(0x80000000): max_extended_levels: 0x80000008
+CPUID(1): SSE3 MONITOR SMX EIST TM2 TSC MSR ACPI-TM HT TM
+CPUID(6): APERF, TURBO, DTS, PTM, HWP, No-HWPnotify, HWPwindow, HWPepp, HWPpkg, EPB
+cpu0: MSR_IA32_MISC_ENABLE: 0x00850089 (TCC EIST MWAIT PREFETCH TURBO)
+CPUID(7): SGX No-Hybrid
+cpu0: MSR_IA32_FEATURE_CONTROL: 0x00100005 (Locked )
+CPUID(0x15): eax_crystal: 2 ebx_tsc: 200 ecx_crystal_hz: 25000000
+TSC: 2500 MHz (25000000 Hz * 200 / 2 / 1000000)
+CPUID(0x16): base_mhz: 2500 max_mhz: 4100 bus_mhz: 100
+cpu0: MSR_PLATFORM_INFO: 0x405082cf9801900
+8 * 100.0 = 800.0 MHz max efficiency frequency
+25 * 100.0 = 2500.0 MHz base frequency
+cpu0: MSR_TURBO_RATIO_LIMIT: 0x2727282828282829
+cpu0: MSR_TURBO_RATIO_LIMIT1: 0x201e1c1a18161410
+39 * 100.0 = 3900.0 MHz max turbo 32 active cores
+39 * 100.0 = 3900.0 MHz max turbo 30 active cores
+40 * 100.0 = 4000.0 MHz max turbo 28 active cores
+40 * 100.0 = 4000.0 MHz max turbo 26 active cores
+40 * 100.0 = 4000.0 MHz max turbo 24 active cores
+40 * 100.0 = 4000.0 MHz max turbo 22 active cores
+40 * 100.0 = 4000.0 MHz max turbo 20 active cores
+41 * 100.0 = 4100.0 MHz max turbo 16 active cores
+cpu0: MSR_CONFIG_TDP_NOMINAL: 0x00000000 (base_ratio=0)
+cpu0: MSR_CONFIG_TDP_LEVEL_1: 0x00000000 ()
+cpu0: MSR_CONFIG_TDP_LEVEL_2: 0x00000000 ()
+cpu0: MSR_CONFIG_TDP_CONTROL: 0x00000000 ( lock=0)
+cpu0: MSR_TURBO_ACTIVATION_RATIO: 0x00000000 (MAX_NON_TURBO_RATIO=0 lock=0)
+cpu0: cpufreq driver: intel_pstate
+cpu0: cpufreq governor: performance
+cpufreq intel_pstate no_turbo: 0
+cpu0: MSR_MISC_PWR_MGMT: 0x00003040 (ENable-EIST_Coordination DISable-EPB DISable-OOB)
+cpu0: MSR_PM_ENABLE: 0x00000001 (HWP)
+cpu0: MSR_HWP_CAPABILITIES: 0x05081929 (high 41 guar 25 eff 8 low 5)
+cpu0: MSR_HWP_REQUEST: 0x0000ffff (min 255 max 255 des 0 epp 0x0 window 0x0 pkg 0x0)
+cpu0: MSR_HWP_REQUEST_PKG: 0x8000ff00 (min 0 max 255 des 0 epp 0x80 window 0x0)
+cpu0: MSR_HWP_STATUS: 0x00000000 (No-Guaranteed_Perf_Change, No-Excursion_Min)
+  ... (see ./perf_metrics_sequoia06-4_20260303_112021/turbostat.txt for full output)
+
+------------------------------------------------------------------------
+  [mlc_workload] perf stat during MLC benchmark
+------------------------------------------------------------------------
+
+ Performance counter stats for 'system wide':
+
+       14312865726      UNC_M_CAS_COUNT_SCH0.RD          #  52081.0 MB/s  memory_bandwidth_read
+                                                  #  92565.3 MB/s  memory_bandwidth_total  (92.97%)
+       11119934967      UNC_M_CAS_COUNT_SCH1.WR          #  40484.3 MB/s  memory_bandwidth_write  (92.97%)
+       11119884370      UNC_M_CAS_COUNT_SCH0.WR                                                 (92.97%)
+       14297521741      UNC_M_CAS_COUNT_SCH1.RD                                                 (92.97%)
+       35172624600 ns   duration_time                    #    35.16 tma_info_system_time      
+     5072989610470      CPU_CLK_UNHALTED.REF_TSC         #     0.01 tma_info_system_cpu_utilization
+                                                  #     0.90 tma_info_system_cpus_utilized
+                                                  #   249.59 tma_info_system_core_frequency  (75.50%)
+     7914027981838      CPU_CLK_UNHALTED.THREAD                                                 (75.50%)
+     5624894039390      TSC                                                                     (75.50%)
+       35172613948 ns   duration_time                                                         
+     5515264735883      INST_RETIRED.ANY                 # 5515264735883.00 tma_info_inst_mix_instructions
+                                                  #     0.70 tma_info_thread_ipc         (75.54%)
+     7917047960529      CPU_CLK_UNHALTED.THREAD                                                 (75.54%)
+       35172608254 ns   duration_time                                                         
+     7913675889009      CPU_CLK_UNHALTED.THREAD          #     1.00 tma_info_system_mux         (75.84%)
+     7913675889009      CPU_CLK_UNHALTED.THREAD_P                                               (75.84%)
+       35172598321 ns   duration_time                                                         
+
+      35.158018588 seconds time elapsed
+
+
+------------------------------------------------------------------------
+  [mlc_workload_raw] MLC stdout during profiled run
+------------------------------------------------------------------------
+Intel(R) Memory Latency Checker - v3.12
+Detected Birch Stream platform, latency optimized mode may need to be turned on to get the best latencies. 
+Command line parameters: --peak_injection_bandwidth 
+
+Using buffer size of 100.000MiB/thread for reads and an additional 100.000MiB/thread for writes
+
+Measuring Peak Injection Memory Bandwidths for the system
+Bandwidths are in MB/sec (1 MB/sec = 1,000,000 Bytes/sec)
+Using all the threads from each core if Hyper-threading is enabled
+Using traffic with the following read-write ratios
+ALL Reads        :	166945.3	
+3:1 Reads-Writes :	149280.1	
+2:1 Reads-Writes :	146327.5	
+1:1 Reads-Writes :	141069.5	
+Stream-triad like:	146281.2	
+All NT writes    :	137488.6	
+1:1 Read-NT write:	140607.6	
+
+
+========================================================================
+  END OF REPORT
+========================================================================

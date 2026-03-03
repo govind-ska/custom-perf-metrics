@@ -1,0 +1,27 @@
+
+ Performance counter stats for 'system wide':
+
+     2794252219460      slots                            #     65.2 %  tma_backend_bound      
+                                                  #      1.8 %  tma_bad_speculation    
+                                                  #      4.6 %  tma_frontend_bound     
+                                                  #     28.5 %  tma_retiring           
+                                                  #      6.7 %  tma_core_bound         
+                                                  #      2.0 %  tma_heavy_operations   
+                                                  #     26.5 %  tma_light_operations   
+                                                  #     58.5 %  tma_memory_bound       
+                                                  #      1.0 %  tma_branch_mispredicts 
+                                                  #      1.1 %  tma_fetch_bandwidth    
+                                                  #      3.4 %  tma_fetch_latency      
+                                                  #      0.7 %  tma_machine_clears       (19.82%)
+      839573472739      topdown-retiring                                                        (19.82%)
+      142426326012      topdown-fe-bound                                                        (19.82%)
+     1724627895897      topdown-mem-bound                                                       (19.82%)
+     1920664538429      topdown-be-bound                                                        (19.82%)
+       59574845398      topdown-heavy-ops                                                       (19.82%)
+       30257195147      topdown-br-mispredict                                                   (19.82%)
+      108881264320      topdown-fetch-lat                                                       (19.82%)
+       43767113772      topdown-bad-spec                                                        (19.82%)
+        7684401101      INT_MISC.UOP_DROPPING                                                   (23.79%)
+
+       5.011123547 seconds time elapsed
+

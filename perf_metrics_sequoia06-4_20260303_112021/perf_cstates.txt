@@ -1,0 +1,8 @@
+
+ Performance counter stats for 'system wide':
+
+                 0      cstate_core/c6-residency/                                             
+                 0      cstate_pkg/c6-residency/                                              
+
+       5.009077864 seconds time elapsed
+

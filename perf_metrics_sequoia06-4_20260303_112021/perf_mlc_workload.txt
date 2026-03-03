@@ -1,0 +1,25 @@
+
+ Performance counter stats for 'system wide':
+
+       14312865726      UNC_M_CAS_COUNT_SCH0.RD          #  52081.0 MB/s  memory_bandwidth_read
+                                                  #  92565.3 MB/s  memory_bandwidth_total  (92.97%)
+       11119934967      UNC_M_CAS_COUNT_SCH1.WR          #  40484.3 MB/s  memory_bandwidth_write  (92.97%)
+       11119884370      UNC_M_CAS_COUNT_SCH0.WR                                                 (92.97%)
+       14297521741      UNC_M_CAS_COUNT_SCH1.RD                                                 (92.97%)
+       35172624600 ns   duration_time                    #    35.16 tma_info_system_time      
+     5072989610470      CPU_CLK_UNHALTED.REF_TSC         #     0.01 tma_info_system_cpu_utilization
+                                                  #     0.90 tma_info_system_cpus_utilized
+                                                  #   249.59 tma_info_system_core_frequency  (75.50%)
+     7914027981838      CPU_CLK_UNHALTED.THREAD                                                 (75.50%)
+     5624894039390      TSC                                                                     (75.50%)
+       35172613948 ns   duration_time                                                         
+     5515264735883      INST_RETIRED.ANY                 # 5515264735883.00 tma_info_inst_mix_instructions
+                                                  #     0.70 tma_info_thread_ipc         (75.54%)
+     7917047960529      CPU_CLK_UNHALTED.THREAD                                                 (75.54%)
+       35172608254 ns   duration_time                                                         
+     7913675889009      CPU_CLK_UNHALTED.THREAD          #     1.00 tma_info_system_mux         (75.84%)
+     7913675889009      CPU_CLK_UNHALTED.THREAD_P                                               (75.84%)
+       35172598321 ns   duration_time                                                         
+
+      35.158018588 seconds time elapsed
+
