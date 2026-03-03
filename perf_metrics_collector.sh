@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 ###############################################################################
 # Author: govind.ska@nutanix.com
-# Version 1.0.0
+# Version 1.1.0
 # perf_metrics_collector.sh
 #
 # Standalone metrics collector using perf stat + turbostat.
@@ -14,8 +14,8 @@
 # Each category (core, uncore, TMA, power) runs as a separate perf stat
 # invocation so that a failure in one does not kill the others.
 #
-# Usage:  sudo bash perf_metrics_collector.sh [-t seconds] [-i interval_ms] [-o outdir]
-# Requirements: perf, root. turbostat optional.
+# Usage:  sudo bash perf_metrics_collector.sh [-t seconds] [-i interval_ms] [-m] [-w] [-p mlc_path] [-o outdir]
+# Requirements: perf, root. turbostat optional, mlc optional (Intel MLC).
 ###############################################################################
 set -euo pipefail
 
@@ -24,18 +24,33 @@ ORIG_CMD="$0 $*"
 DURATION=10
 INTERVAL=5000
 OUTDIR=""
+MLC_STANDALONE=false
+MLC_WORKLOAD=false
+MLC_PATH=""
 TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
 
 usage() {
-    echo "Usage: sudo $0 [-t duration_sec] [-i interval_ms] [-o output_dir] [-h]"
+    echo "Usage: sudo $0 [-t duration_sec] [-i interval_ms] [-m] [-w] [-p mlc_path] [-o output_dir] [-h]"
     echo "  -t  Collection duration in seconds (default: 10)"
     echo "  -i  Sampling interval in milliseconds (default: 5000)"
     echo "      Set to 0 to disable time-series and collect aggregate only"
+    echo "  -m  Run MLC standalone benchmark (idle latency, peak BW, matrices, loaded latency)"
+    echo "  -w  Run perf stat with MLC as the workload (profile system during memory stress)"
+    echo "  -p  Path to mlc binary (default: searches PATH, ./tools/x86_64/mlc, /usr/local/bin/mlc)"
     echo "  -o  Output directory (default: auto-generated)"
     exit 0
 }
-while getopts "t:i:o:h" opt; do
-    case $opt in t) DURATION=$OPTARG;; i) INTERVAL=$OPTARG;; o) OUTDIR=$OPTARG;; h) usage;; *) usage;; esac
+while getopts "t:i:o:p:mwh" opt; do
+    case $opt in
+        t) DURATION=$OPTARG;;
+        i) INTERVAL=$OPTARG;;
+        o) OUTDIR=$OPTARG;;
+        p) MLC_PATH="$OPTARG";;
+        m) MLC_STANDALONE=true;;
+        w) MLC_WORKLOAD=true;;
+        h) usage;;
+        *) usage;;
+    esac
 done
 
 [[ "$(id -u)" -ne 0 ]] && { echo "ERROR: Run as root (sudo)."; exit 1; }
@@ -76,6 +91,32 @@ run_perf() {
         echo "  [$label] WARNING: some events may have failed (see $outfile)"
     fi
 }
+
+###############################################################################
+# Resolve MLC binary
+###############################################################################
+MLC_BIN=""
+if [[ "$MLC_STANDALONE" == true ]] || [[ "$MLC_WORKLOAD" == true ]]; then
+    if [[ -n "$MLC_PATH" ]] && [[ -x "$MLC_PATH" ]]; then
+        MLC_BIN="$MLC_PATH"
+    elif command -v mlc &>/dev/null; then
+        MLC_BIN=$(command -v mlc)
+    elif [[ -x "./tools/x86_64/mlc" ]]; then
+        MLC_BIN="./tools/x86_64/mlc"
+    elif [[ -x "/usr/local/bin/mlc" ]]; then
+        MLC_BIN="/usr/local/bin/mlc"
+    fi
+
+    if [[ -z "$MLC_BIN" ]]; then
+        echo "WARNING: MLC binary not found. Searched: PATH, ./tools/x86_64/mlc, /usr/local/bin/mlc"
+        echo "         Specify path with -p /path/to/mlc"
+        echo "         MLC benchmarks will be skipped."
+        MLC_STANDALONE=false
+        MLC_WORKLOAD=false
+    else
+        echo "  MLC binary: $MLC_BIN"
+    fi
+fi
 
 ###############################################################################
 echo ""
@@ -270,6 +311,54 @@ else
 fi
 
 ###############################################################################
+# MLC standalone benchmark (runs after perf collectors are launched)
+###############################################################################
+if [[ "$MLC_STANDALONE" == true ]]; then
+    MLC_FILE="$OUTDIR/mlc_standalone.txt"
+    echo "  [mlc_standalone] running benchmark..."
+    (
+        echo "=== MLC Idle Latency ==="
+        "$MLC_BIN" --idle_latency 2>&1 || true
+        echo ""
+        echo "=== MLC Peak Bandwidth ==="
+        "$MLC_BIN" --peak_injection_bandwidth 2>&1 || true
+        echo ""
+        echo "=== MLC Bandwidth Matrix ==="
+        "$MLC_BIN" --bandwidth_matrix 2>&1 || true
+        echo ""
+        echo "=== MLC Latency Matrix ==="
+        "$MLC_BIN" --latency_matrix 2>&1 || true
+        echo ""
+        echo "=== MLC Loaded Latency ==="
+        "$MLC_BIN" --loaded_latency 2>&1 || true
+    ) > "$MLC_FILE" 2>&1 &
+    echo "  [mlc_standalone] running in background..."
+fi
+
+###############################################################################
+# MLC as perf stat workload (perf stat wrapping MLC)
+###############################################################################
+if [[ "$MLC_WORKLOAD" == true ]]; then
+    MLC_PERF_FILE="$OUTDIR/perf_mlc_workload.txt"
+    MLC_RAW_FILE="$OUTDIR/mlc_workload_raw.txt"
+    echo "  [mlc_workload] running perf stat with MLC as workload..."
+
+    _mlc_interval_args=()
+    [[ "$INTERVAL" -gt 0 ]] && _mlc_interval_args=(-I "$INTERVAL")
+
+    if [[ "$VENDOR" == "GenuineIntel" ]]; then
+        perf stat "${_mlc_interval_args[@]}" -a \
+            -M memory_bandwidth_read,memory_bandwidth_write,memory_bandwidth_total,Summary \
+            -- "$MLC_BIN" --peak_injection_bandwidth > "$MLC_RAW_FILE" 2>"$MLC_PERF_FILE" &
+    else
+        perf stat "${_mlc_interval_args[@]}" -a \
+            -e '{cpu-cycles,instructions,cpu/event=0x44,umask=0x5f,name=ls_any_fills_from_sys.all/,cpu/event=0x44,umask=0x48,name=ls_any_fills_from_sys.dram_io_all/}' \
+            -- "$MLC_BIN" --peak_injection_bandwidth > "$MLC_RAW_FILE" 2>"$MLC_PERF_FILE" &
+    fi
+    echo "  [mlc_workload] running in background..."
+fi
+
+###############################################################################
 # Wait for all background perf commands
 ###############################################################################
 echo ""
@@ -308,6 +397,30 @@ REPORT="$OUTDIR/METRICS_REPORT.txt"
         echo "  ... (see $TURBO_FILE for full output)"
     fi
 
+    if [[ -f "$OUTDIR/mlc_standalone.txt" ]] && [[ -s "$OUTDIR/mlc_standalone.txt" ]]; then
+        echo ""
+        echo "------------------------------------------------------------------------"
+        echo "  [mlc_standalone] Memory Latency Checker Benchmark"
+        echo "------------------------------------------------------------------------"
+        cat "$OUTDIR/mlc_standalone.txt"
+    fi
+
+    if [[ -f "$OUTDIR/perf_mlc_workload.txt" ]] && [[ -s "$OUTDIR/perf_mlc_workload.txt" ]]; then
+        echo ""
+        echo "------------------------------------------------------------------------"
+        echo "  [mlc_workload] perf stat during MLC benchmark"
+        echo "------------------------------------------------------------------------"
+        cat "$OUTDIR/perf_mlc_workload.txt"
+    fi
+
+    if [[ -f "$OUTDIR/mlc_workload_raw.txt" ]] && [[ -s "$OUTDIR/mlc_workload_raw.txt" ]]; then
+        echo ""
+        echo "------------------------------------------------------------------------"
+        echo "  [mlc_workload_raw] MLC stdout during profiled run"
+        echo "------------------------------------------------------------------------"
+        cat "$OUTDIR/mlc_workload_raw.txt"
+    fi
+
     echo ""
     echo "========================================================================"
     echo "  END OF REPORT"
@@ -323,6 +436,8 @@ ls -1 "$OUTDIR"/perf_*.txt 2>/dev/null | while read f; do
     echo "  $(basename "$f")"
 done
 [[ -n "${TURBO_PID:-}" ]] && echo "  turbostat.txt"
+[[ -f "$OUTDIR/mlc_standalone.txt" ]] && echo "  mlc_standalone.txt"
+[[ -f "$OUTDIR/mlc_workload_raw.txt" ]] && echo "  mlc_workload_raw.txt"
 echo "============================================="
 echo ""
 echo "View report:  cat $REPORT"

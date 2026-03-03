@@ -13,13 +13,16 @@ Output is written to `./perf_metrics_<hostname>_<timestamp>/`.
 ## Usage
 
 ```
-sudo bash perf_metrics_collector.sh [-t duration_sec] [-i interval_ms] [-o output_dir] [-h]
+sudo bash perf_metrics_collector.sh [-t duration_sec] [-i interval_ms] [-m] [-w] [-p mlc_path] [-o output_dir] [-h]
 ```
 
 | Flag | Default | Description |
 |------|---------|-------------|
 | `-t` | `30` | Collection duration in seconds |
 | `-i` | `5000` | Time-series sampling interval in milliseconds. Set to `0` for aggregate-only (single summary per collection) |
+| `-m` | off | Run MLC standalone benchmark (idle latency, peak BW, bandwidth matrix, latency matrix, loaded latency) |
+| `-w` | off | Run `perf stat` with MLC as the workload (profile system-wide counters while MLC stresses memory) |
+| `-p` | auto | Path to `mlc` binary. Auto-searches: `PATH`, `./tools/x86_64/mlc`, `/usr/local/bin/mlc` |
 | `-o` | auto | Output directory. Default: `./perf_metrics_<hostname>_<YYYYMMDD_HHMMSS>` |
 | `-h` | | Print usage and exit |
 
@@ -32,6 +35,15 @@ sudo bash perf_metrics_collector.sh -t 60 -i 1000
 # 30-second aggregate-only (no time-series)
 sudo bash perf_metrics_collector.sh -t 30 -i 0
 
+# Include MLC standalone benchmark
+sudo bash perf_metrics_collector.sh -t 30 -m
+
+# Include MLC as profiled workload (perf stat wrapping MLC)
+sudo bash perf_metrics_collector.sh -t 30 -w
+
+# Both MLC modes with explicit binary path
+sudo bash perf_metrics_collector.sh -t 30 -m -w -p /opt/mlc/mlc
+
 # Custom output directory
 sudo bash perf_metrics_collector.sh -t 10 -o /tmp/my_run
 ```
@@ -41,6 +53,7 @@ sudo bash perf_metrics_collector.sh -t 10 -o /tmp/my_run
 - **perf** (linux-tools / perf-tools package)
 - **root** (sudo) - required for system-wide collection and NMI watchdog control
 - **turbostat** (optional) - frequency, C-states, temperature, power via MSRs
+- **mlc** (optional) - Intel's Memory Latency Checker for memory bandwidth/latency benchmarking. Download from [Intel MLC](https://www.intel.com/content/www/us/en/download/736633/). Required only when using `-m` or `-w` flags
 
 ## How It Works
 
@@ -100,6 +113,17 @@ Uses raw event codes from PerfSpect's event definitions across three PMU types: 
 
 Runs in the background when available. Captures per-core frequency, C-state residency, temperature, and power readings via MSRs.
 
+### MLC Integration (optional, both platforms)
+
+Two modes are available when MLC is present:
+
+| Mode | Flag | What It Does |
+|------|------|-------------|
+| **Standalone** (`-m`) | `-m` | Runs MLC benchmarks sequentially: idle latency, peak injection bandwidth, bandwidth matrix (NUMA node pairs), latency matrix, and loaded latency (BW vs latency curve). Output is pure MLC text. |
+| **Profiled workload** (`-w`) | `-w` | Runs `perf stat` system-wide **while** MLC's `--peak_injection_bandwidth` test is the workload. On Intel, collects memory BW metric groups + Summary + LLC events. On AMD, collects core cycles/instructions + memory fill events. Lets you see hardware counter behavior under peak memory stress. |
+
+Both modes run in parallel with the regular perf collectors and turbostat. MLC output is included in the combined `METRICS_REPORT.txt`.
+
 ## Output Structure (example)
 
 ```
@@ -119,6 +143,9 @@ perf_metrics_sequoia06-4_20260227_064926/
   perf_core.txt
   perf_cstates.txt
   turbostat.txt
+  mlc_standalone.txt            # (only with -m) Full MLC benchmark output
+  perf_mlc_workload.txt         # (only with -w) perf stat counters during MLC run
+  mlc_workload_raw.txt          # (only with -w) MLC stdout during profiled run
 ```
 
 Each `perf_*.txt` file contains raw `perf stat` output. When time-series mode is enabled (`-i > 0`), each file contains timestamped rows at the specified interval:
